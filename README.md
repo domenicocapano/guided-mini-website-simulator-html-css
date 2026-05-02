@@ -60,3 +60,9 @@ guided-mini-website-simulator-html-css/
     │
     └── immagini/
         └── README.txt
+
+## Zenodo Publication
+
+This project is archived on Zenodo with DOI:
+
+https://doi.org/10.5281/zenodo.19988525
