@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Geografia del Giappone</title>
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <h1>Geografia del Giappone</h1>
+  <p>Mini-sito completo sul Giappone: modello didattico di prodotto eccellente, con contenuti estesi, immagini reali, pagine aggiuntive e crediti.</p>
+  <nav class="menu">
+  <a class="" href="index.html">Home</a>
+  <a class="attivo" href="geografia.html">Geografia</a>
+  <a class="" href="economia.html">Economia</a>
+  <a class="" href="cultura.html">Cultura</a>
+  <a class="" href="storia.html">Storia</a>
+  <a class="" href="turismo.html">Turismo</a>
+  <a class="" href="tecnologia.html">Tecnologia</a>
+  <a class="" href="curiosita.html">Curiosità</a>
+  <a class="" href="crediti.html">Crediti immagini</a>
+</nav>
+</header>
+<main>
+  <div class="avviso">
+    <strong>Uso didattico:</strong> questo esempio mostra come può apparire un lavoro di livello alto. Non deve essere copiato: serve a capire struttura, completezza, qualità dei contenuti, uso del menu e gestione delle immagini.
+  </div>
+
+<section class="scheda">
+  <h2>Posizione geografica e territorio</h2>
+  <div class="griglia">
+    <div>
+      <p>Il Giappone si trova nell'Asia orientale, a est della penisola coreana e della Cina. È bagnato dall'Oceano Pacifico e dal Mar del Giappone. La sua posizione insulare ha influenzato molto la storia, l'economia e la cultura del Paese, favorendo sia contatti marittimi sia una forte identità nazionale.</p>
+      <p>Il territorio giapponese è formato da numerose isole. Le principali sono Honshu, Hokkaido, Kyushu e Shikoku. Honshu è la più grande e ospita città fondamentali come Tokyo, Kyoto, Osaka e Hiroshima. La presenza di molte montagne riduce lo spazio disponibile per agricoltura e insediamenti, concentrando popolazione e attività economiche nelle pianure e lungo le coste.</p>
+    </div>
+    <figure class="figura">
+      <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Japan%20location%20map.svg" alt="Mappa del Giappone">
+      <figcaption>Mappa di localizzazione del Giappone.</figcaption>
+    </figure>
+  </div>
+</section>
+<section class="scheda">
+  <h2>Clima, montagne e rischi naturali</h2>
+  <p>Il clima del Giappone varia molto da nord a sud. A Hokkaido gli inverni sono freddi e nevosi, mentre nelle zone meridionali il clima è più mite. Durante l'anno si possono verificare tifoni, piogge intense e periodi di forte umidità.</p>
+  <p>Il Giappone è situato in una zona di intensa attività sismica e vulcanica. Per questo motivo terremoti e tsunami rappresentano rischi naturali importanti. Il Paese ha sviluppato tecniche edilizie, sistemi di allarme e procedure di emergenza molto avanzate.</p>
+  <figure class="figura">
+    <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Mount%20Fuji%2C%20Japan.JPG" alt="Monte Fuji in Giappone">
+    <figcaption>Il Monte Fuji è uno dei simboli naturali del Giappone.</figcaption>
+  </figure>
+</section>
+
+</main>
+<footer>
+  <p>Mini-sito realizzato con HTML e CSS.</p>
+  <p>&copy; Copyright Domenico Capano - LearningObjects.org</p>
+</footer>
+
+<script>
+document.addEventListener("copy", function(e){
+  e.preventDefault();
+  alert("Questo è un esempio da osservare, non da copiare. Usa la struttura come modello e scrivi contenuti tuoi.");
+});
+document.addEventListener("cut", function(e){ e.preventDefault(); });
+document.addEventListener("contextmenu", function(e){
+  e.preventDefault();
+  alert("Il tasto destro è disattivato nell'esempio didattico.");
+});
+document.addEventListener("keydown", function(e){
+  const key = e.key.toLowerCase();
+  if((e.ctrlKey && (key === "u" || key === "s" || key === "c")) || e.key === "F12"){
+    e.preventDefault();
+    alert("Questo esempio serve come modello di qualità, non come testo da copiare.");
+  }
+});
+</script>
+
+</body>
+</html>

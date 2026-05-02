@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Turismo in Giappone</title>
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <h1>Turismo in Giappone</h1>
+  <p>Mini-sito completo sul Giappone: modello didattico di prodotto eccellente, con contenuti estesi, immagini reali, pagine aggiuntive e crediti.</p>
+  <nav class="menu">
+  <a class="" href="index.html">Home</a>
+  <a class="" href="geografia.html">Geografia</a>
+  <a class="" href="economia.html">Economia</a>
+  <a class="" href="cultura.html">Cultura</a>
+  <a class="" href="storia.html">Storia</a>
+  <a class="attivo" href="turismo.html">Turismo</a>
+  <a class="" href="tecnologia.html">Tecnologia</a>
+  <a class="" href="curiosita.html">Curiosità</a>
+  <a class="" href="crediti.html">Crediti immagini</a>
+</nav>
+</header>
+<main>
+  <div class="avviso">
+    <strong>Uso didattico:</strong> questo esempio mostra come può apparire un lavoro di livello alto. Non deve essere copiato: serve a capire struttura, completezza, qualità dei contenuti, uso del menu e gestione delle immagini.
+  </div>
+
+<section class="scheda">
+  <h2>Città e luoghi da visitare</h2>
+  <div class="griglia">
+    <div>
+      <p>Il Giappone è una meta turistica molto ricca. Tokyo offre quartieri moderni, musei, tecnologia, negozi e una grande varietà di servizi. Kyoto è invece associata a templi, giardini e tradizioni storiche. Osaka è famosa per la cucina e per il carattere vivace della città.</p>
+      <p>Il turismo in Giappone permette di osservare differenze tra aree urbane e naturali. Oltre alle grandi città, sono importanti il Monte Fuji, le terme, i parchi, le coste e i paesaggi rurali. La rete ferroviaria rende molti spostamenti rapidi ed efficienti.</p>
+    </div>
+    <figure class="figura">
+      <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Tokyo%20Skyline%20%28214472345%29.jpeg" alt="Skyline di Tokyo">
+      <figcaption>Tokyo rappresenta il volto moderno e metropolitano del Giappone.</figcaption>
+    </figure>
+  </div>
+</section>
+<section class="scheda">
+  <h2>Turismo responsabile</h2>
+  <p>Visitare il Giappone significa anche rispettare regole di comportamento: silenzio sui mezzi pubblici, attenzione alla raccolta dei rifiuti, rispetto dei templi e degli spazi comuni. Un buon turista non osserva solo i luoghi, ma cerca di comprendere le abitudini del Paese visitato.</p>
+</section>
+
+</main>
+<footer>
+  <p>Mini-sito realizzato con HTML e CSS.</p>
+  <p>&copy; Copyright Domenico Capano - LearningObjects.org</p>
+</footer>
+
+<script>
+document.addEventListener("copy", function(e){
+  e.preventDefault();
+  alert("Questo è un esempio da osservare, non da copiare. Usa la struttura come modello e scrivi contenuti tuoi.");
+});
+document.addEventListener("cut", function(e){ e.preventDefault(); });
+document.addEventListener("contextmenu", function(e){
+  e.preventDefault();
+  alert("Il tasto destro è disattivato nell'esempio didattico.");
+});
+document.addEventListener("keydown", function(e){
+  const key = e.key.toLowerCase();
+  if((e.ctrlKey && (key === "u" || key === "s" || key === "c")) || e.key === "F12"){
+    e.preventDefault();
+    alert("Questo esempio serve come modello di qualità, non come testo da copiare.");
+  }
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,2237 @@
+<!--
+  Simulatore didattico per la realizzazione di mini-siti web in HTML e CSS
+  Autore: Domenico Capano
+  LearningObjects.org
+  Uso esclusivamente didattico
+  È vietata la distribuzione non autorizzata.
+-->
+
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Simulatore didattico: mini-sito web in HTML e CSS</title>
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="icon" type="image/png"
+href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAFdUlEQVR4nMWXSWwcRRSG/1ddPbs9No49Y2s8CVECBAgEgdgTQCAQB5DIAciFAyA4sJyQuHCCAwcWgRBCIJBYxHJBEQEhFLYgQEiAlASHYLIpdrzgZcaZ8dg901P1HodxDzO243gCIk/qQ1d1ve+vV1WvXhMaLPzwt+u0hB8RkjtJsB5gjVUbAWBRm3LDlC4VwKDVjKoDEg/s2S4IvQRH9xMbAHb1bBAAEbVxZoTSswUwrQoejET0wT13KR36CKAQ2LQAboTnRihTyIOVaml05KHvsw7wE5Tu+7/hAKAc0GNwwmcFDgBKwHdBzg4cABQJzgWfyYb793AAUCBqwcF/C68JOItwoCEPBMYClKsMQAAQIq6CopXhzIIyMwsEmhQREQxbiEBCjkOuOnVeaBJgGejtcHH/tl4oAkQEb343gb+KFXHPyy8Lr1iWpOuqHWuzHTemehOZWCzkOkTTZd/szefndw4dLw6cnPFjWi9VoSCLBAhS7S6euiNbb/tsf07G1oyOUGZ2CbxsjFyXSkdfvvKqzObOzuhi/3f093c8vmlTz4sHf598bmBg2nUaQqFEJBeNL7sEhgVaEawVuBtOjpEt5sFOE9xnkc3ndIU/2nbDup5o1AWAuWqVf56eLpWM4Us7O2PZRCLUEQrpp7dc1ifCeHbgwFRcOwqKWSYT7TzYnV3xshEScc6pzGGCCM6iPhE8s+WydACf8jxz3w8/HP9ybHROAKSiUf329Vszt/b1JQHgiYs2p3YNnyge9gplPZlI8mB3FkY5p9/Jy9xqVRa5IJkMbUul2oK21w8fmvpi5EQp7mqVcLXKlT375K+/jM9WqxYAkqGQs/3cbFtlPNrGgz1ZGOWAZPExpIVnZauyxebOzkjcdVXtnWX36GgprHXdX1hr+rNY9AcLhXLQdrHT20V/dK8N4EBTHiBAMev+4hQp4ZUEiEC6I5H68nnGcK7im8bTRgtCp8rlatDWQbGIw64O4A0CaueczpsecTOlvJyumCACs9S9EEAOLT9G0T+qLAf5paG/XslszI2ozGwe9vQZzgHRiDdfn1ncdVUmFnPtP5ogAKLaof54LBS0jc5UYOwSASxqYy3JiFl6L1SslYqpStmY+mOFZW8uV86Vy2Zhlrh7/fqkbwwbgTALZv0qX9/R17ahrT0S+Pr+UGHJZLS6YHqYekuFWpLhJnmkFLal0/F0LKbdhlB61vLusbG5j4eGZh46//xuALh37bquw5cU/HeOHpkps5VrOnqTL1x+VX/YcQgAjkx4+Hx/HmHdvFLU/uG7+4MarmJZru7ujn51620btFKn3Afj8/PVLZ/uOqQAfHrLLeuu6FoTD/omPK9asZZ7Y7GQu+Cj6Fnc89pBfHlgBhG3OchqcQFJAFaC10NHhLzv2+3ffD30wbFjueC8p6JRN5tIhF2lyLLg64MzuO3537B7YCm8FoH33/steGEWJEMhdW0qFSWRU4rwrOUfJyY8AxHDIoYFF69pdy9Htidd7uoKaeCvQhVHJz3cfGEnJoo+Xv92HFZkyVFpSsVKEYq+z58MHS+tNHsihbBTi5JWRFoL/3G4Gt53oNgu1RJAAvEFO7am8cTtGQDAvuES9gyeRFg3R2HJXUCKEFH69OmwrppZJuPt6s+ebJSUg3BtHxtHcHBsDoPj85j1LI5MeNCLV1aEm5agZVuAN+b2RjMsaI84sAzM+xZOowDlQNgcbeHXqzU4AGhFKFUsAGqGAwBpEHjnmQlYBbz+6XLVmNKArYxZ4JXWC8sW4MuP1wDEZ7aPlt/YOtyaACVSq2TOAE4O4IQBkRNU9Xd4b964E1jmFJwaDpF8NB5UMq3NXBmBHCNrdhmqvFp566bjQc/fAhPXOMT/0dgAAAAASUVORK5CYII=">
+<style>
+:root{
+  --blu:#1f4e79;
+  --blu2:#2f75b5;
+  --chiaro:#eef5ff;
+  --bordo:#c9d8ea;
+  --testo:#1f2937;
+  --ok:#15803d;
+  --errore:#b91c1c;
+  --grigio:#f3f4f6;
+}
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family:Arial, Helvetica, sans-serif;
+  background:#f6f8fb;
+  color:var(--testo);
+  line-height:1.55;
+}
+header{
+  background:linear-gradient(135deg,var(--blu),var(--blu2));
+  color:white;
+  padding:24px 18px;
+}
+header .wrap, main{max-width:1180px;margin:auto}
+h1{margin:0 0 8px 0;font-size:clamp(1.6rem,4vw,2.4rem)}
+h2{color:var(--blu);border-bottom:2px solid var(--bordo);padding-bottom:6px}
+h3{color:#24496b}
+main{padding:18px}
+.card{
+  background:white;
+  border:1px solid var(--bordo);
+  border-radius:14px;
+  padding:18px;
+  margin:14px 0;
+  box-shadow:0 4px 14px rgba(0,0,0,.06);
+}
+.descrizione-header{
+  color: #ffffff;
+  font-size: 1rem;
+  margin-top: 10px;
+  opacity: 0.95;
+  max-width: 900px;
+}
+
+.campo-guidato{
+  border: 3px solid #ca8a04 !important;
+  background-color: #fefce8 !important;
+  box-shadow: 0 0 0 4px rgba(202,138,4,0.18);
+}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:850px){.grid{grid-template-columns:1fr}}
+label{font-weight:bold;display:block;margin-top:10px}
+input, textarea, select{
+  width:100%;
+  padding:10px;
+  margin-top:5px;
+  border:1px solid #b8c6d8;
+  border-radius:8px;
+  font-size:1rem;
+}
+textarea{min-height:155px;resize:vertical}
+input[readonly]{background:#eef2f7;border-style:dashed;cursor:not-allowed;color:#4b5563}
+button{
+  border:0;
+  background:var(--blu);
+  color:white;
+  padding:10px 14px;
+  border-radius:8px;
+  cursor:pointer;
+  margin:6px 4px 6px 0;
+  font-weight:bold;
+}
+button:hover{background:#153a5d}
+button.secondary{background:#4b5563}
+button.ok{background:var(--ok)}
+button.danger{background:var(--errore)}
+.small{font-size:.92rem;color:#4b5563}
+.alert{background:#fff7ed;border-left:5px solid #ea580c;padding:12px;border-radius:8px}
+.success{background:#ecfdf5;border-left:5px solid var(--ok);padding:12px;border-radius:8px}
+.error{background:#fef2f2;border-left:5px solid var(--errore);padding:12px;border-radius:8px}
+.step{
+  display:flex;
+  gap:12px;
+  align-items:flex-start;
+  border:1px solid var(--bordo);
+  background:#fbfdff;
+  border-radius:12px;
+  padding:12px;
+  margin:10px 0;
+}
+.num{
+  min-width:34px;height:34px;border-radius:50%;
+  background:var(--blu);color:white;display:flex;align-items:center;justify-content:center;font-weight:bold;
+}
+pre{
+  background:#0f172a;
+  color:#e5e7eb;
+  padding:14px;
+  border-radius:10px;
+  overflow:auto;
+  font-size:.92rem;
+  white-space:pre-wrap;
+}
+code{font-family:Consolas, monospace}
+.tabs button{background:#dbeafe;color:#1e3a8a}
+.tabs button.active{background:var(--blu);color:white}
+.checklist li{margin:6px 0}
+.badge{display:inline-block;background:#e0ecff;color:#173f67;border-radius:20px;padding:3px 9px;margin:2px;font-size:.9rem}
+.preview{
+  border:1px solid var(--bordo);
+  border-radius:10px;
+  background:white;
+  padding:12px;
+  min-height:220px;
+}
+.preview-frame{width:100%;height:520px;border:1px solid var(--bordo);border-radius:10px;background:white;overflow:auto}
+
+/* Finestra modale didattica per i passaggi */
+.step.zoomable {
+  cursor: zoom-in;
+  transition: transform .15s ease, box-shadow .15s ease;
+}
+.step.zoomable:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(31,78,121,.18);
+}
+.modal-step {
+  display:none;
+  position:fixed;
+  inset:0;
+  background:rgba(15,23,42,.62);
+  z-index:9999;
+  padding:20px;
+}
+.modal-step.show {
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.modal-box {
+  width:min(720px,96vw);
+  max-height:86vh;
+  overflow:auto;
+  background:white;
+  color:var(--testo);
+  border-radius:18px;
+  border:3px solid var(--blu2);
+  padding:22px;
+  box-shadow:0 18px 48px rgba(0,0,0,.28);
+}
+.modal-box h3 {
+  margin-top:0;
+  font-size:1.45rem;
+}
+.modal-box .modal-num {
+  width:46px;
+  height:46px;
+  border-radius:50%;
+  background:var(--blu);
+  color:white;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  font-weight:bold;
+  margin-right:10px;
+}
+.modal-close {
+  float:right;
+  background:var(--errore);
+}
+@media (hover:none) {
+  .step.zoomable {
+    cursor:pointer;
+  }
+}
+
+
+/* Miglioria: zoom semplice del testo dei passaggi, senza finestra modale */
+.step {
+  align-items: flex-start;
+}
+.step:hover {
+  transform: scale(1.02);
+  background: #eef5ff;
+  box-shadow: 0 6px 18px rgba(31,78,121,.16);
+}
+.step.zoomable {
+  cursor: default;
+}
+.step.zoomable:hover {
+  cursor: default;
+}
+
+/* Elenchi più leggibili e allineati */
+.card ul,
+.card ol {
+  padding-left: 1.4rem;
+  margin-left: 0;
+}
+.card li {
+  margin: 7px 0;
+  padding-left: 4px;
+}
+
+/* Disattiva eventuale modale precedente */
+.modal-step {
+  display: none !important;
+}
+
+
+/* Checklist finale: allineamento corretto tra checkbox, puntini e testo */
+.checklist {
+  list-style-position: outside;
+  padding-left: 1.6rem;
+}
+.checklist li {
+  display: list-item;
+  padding-left: 0.2rem;
+  margin: 8px 0;
+}
+.checklist input[type="checkbox"] {
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+
+.no-bullets {
+  padding-left: 0;
+  margin-left: 0;
+}
+.check-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  margin: 8px 0;
+}
+.check-row input[type="checkbox"] {
+  margin-top: 4px;
+  flex: 0 0 auto;
+}
+
+
+.checklist-finale {
+  margin-top: 10px;
+}
+.checklist-finale label {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  margin: 8px 0;
+  font-weight: normal;
+  line-height: 1.45;
+}
+.checklist-finale input[type="checkbox"] {
+  width: auto;
+  margin: 3px 0 0 0;
+  flex: 0 0 auto;
+}
+
+
+/* Correzione finale checklist */
+.checklist-finale label {
+  display: flex !important;
+  align-items: flex-start !important;
+  gap: 8px !important;
+  margin: 8px 0 !important;
+  font-weight: normal !important;
+}
+.checklist-finale input[type="checkbox"] {
+  width: auto !important;
+  margin: 3px 0 0 0 !important;
+  flex: 0 0 auto !important;
+}
+
+
+.css-custom-box {
+  display: none;
+  margin-top: 14px;
+  padding: 14px;
+  border: 1px solid var(--bordo);
+  border-radius: 12px;
+  background: #fbfdff;
+}
+.css-custom-box textarea {
+  min-height: 220px;
+  font-family: Consolas, monospace;
+  font-size: 0.95rem;
+}
+@media (max-width: 600px) {
+  header {
+    padding: 18px 12px;
+  }
+  main {
+    padding: 10px;
+  }
+  .card {
+    padding: 14px;
+    border-radius: 10px;
+  }
+  button {
+    width: 100%;
+    margin: 6px 0;
+  }
+  input, textarea, select {
+    font-size: 16px;
+  }
+  .preview-frame {
+    height: 430px;
+  }
+  pre {
+    font-size: 0.82rem;
+  }
+}
+
+
+/* Stati di avanzamento del progetto */
+.progress-dashboard {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 12px;
+}
+.status-card {
+  border: 1px solid var(--bordo);
+  border-radius: 12px;
+  padding: 12px;
+  background: #ffffff;
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+}
+.status-icon {
+  font-size: 1.35rem;
+  min-width: 30px;
+}
+.status-card h3 {
+  margin: 0 0 4px 0;
+  font-size: 1rem;
+  color: var(--blu);
+}
+.status-card p {
+  margin: 0;
+  font-size: .92rem;
+}
+.status-ok {
+  border-left: 6px solid var(--ok);
+}
+.status-warning {
+  border-left: 6px solid #ca8a04;
+}
+.status-error {
+  border-left: 6px solid var(--errore);
+}
+.status-neutral {
+  border-left: 6px solid var(--secondary);
+}
+.progress-bar-wrap {
+  width: 100%;
+  background: #e5e7eb;
+  border-radius: 999px;
+  overflow: hidden;
+  height: 18px;
+  margin: 12px 0;
+}
+.progress-bar {
+  height: 100%;
+  width: 0%;
+  background: var(--ok);
+  transition: width .3s ease;
+}
+.progress-score {
+  font-weight: bold;
+  color: var(--blu);
+}
+@media (max-width: 700px) {
+  .progress-dashboard {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+.valutazione-box {
+  border: 1px solid var(--bordo);
+  border-radius: 12px;
+  background: #ffffff;
+  padding: 14px;
+  margin-top: 12px;
+}
+.valutazione-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+.valutazione-table th,
+.valutazione-table td {
+  border: 1px solid var(--bordo);
+  padding: 8px;
+  vertical-align: top;
+}
+.valutazione-table th {
+  background: #e5edf7;
+  color: var(--blu);
+}
+.punteggio-stimato {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: var(--blu);
+  margin-top: 10px;
+}
+@media (max-width: 700px) {
+  .valutazione-table,
+  .valutazione-table thead,
+  .valutazione-table tbody,
+  .valutazione-table th,
+  .valutazione-table td,
+  .valutazione-table tr {
+    display: block;
+  }
+  .valutazione-table th {
+    display: none;
+  }
+  .valutazione-table td {
+    border-bottom: 0;
+  }
+  .valutazione-table tr {
+    border: 1px solid var(--bordo);
+    margin-bottom: 10px;
+  }
+}
+
+
+/* Modale didattica per anteprima non ancora disponibile */
+.preview-modal{
+  display:none;
+  position:fixed;
+  inset:0;
+  background:rgba(15,23,42,.62);
+  z-index:9999;
+  padding:18px;
+  align-items:center;
+  justify-content:center;
+}
+.preview-modal.show{display:flex}
+.preview-modal-box{
+  width:min(680px,96vw);
+  background:#fff;
+  color:var(--testo);
+  border:3px solid var(--blu2);
+  border-radius:18px;
+  padding:22px;
+  box-shadow:0 18px 48px rgba(0,0,0,.28);
+}
+.preview-modal-box h3{
+  margin-top:0;
+  color:var(--blu);
+  font-size:1.35rem;
+}
+.preview-modal-actions{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+  margin-top:12px;
+}
+.preview-modal-actions button{margin:0}
+@media(max-width:600px){
+  .preview-modal-actions button{width:100%}
+}
+
+</style>
+
+</head>
+
+<body>
+<header>
+  <div class="wrap">
+    <h1>Simulatore didattico: progettazione e sviluppo di un mini-sito web in HTML e CSS</h1>
+    <p><strong>Percorso introduttivo di Informatica</strong> – Progettazione di mini siti web in HTML e CSS</p>
+    <p class="descrizione-header">
+  Ambiente guidato per la realizzazione di un mini-sito web:<br>
+  lo studente viene accompagnato passo passo nella progettazione, scrittura e verifica del codice HTML e CSS.
+</p>
+  </div>
+</header>
+
+<main>
+<section class="card">
+  <h2>1. Obiettivo del simulatore</h2>
+  <p>Questo simulatore aiuta a progettare un mini-sito dedicato a uno Stato del mondo. Alla fine lo studente dovrà ottenere una cartella contenente:</p>
+  <p>
+    <span class="badge">index.html</span>
+    <span class="badge">geografia.html</span>
+    <span class="badge">economia.html</span>
+    <span class="badge">cultura.html</span>
+    <span class="badge">CSS incorporato nei tag &lt;style&gt;</span>
+    <span class="badge">cartella immagini</span>
+  </p>
+  <p>
+    <a href="esempio_giappone_livello10/index.html" target="_blank" style="display:inline-block;background:#15803d;color:#ffffff;text-decoration:none;padding:10px 14px;border-radius:8px;font-weight:bold;">Apri esempio completo: Giappone livello 10</a>
+  </p>
+  <div class="alert">
+    L’esempio completo serve come modello di qualità: osserva struttura, menu, pagine aggiuntive, immagini e crediti, ma non copiare i contenuti.
+  </div>
+  <div class="alert">
+    Prima regola: i nomi dei file devono essere scritti esattamente come indicato. Se il link contiene <code>geografia.html</code>, il file deve chiamarsi proprio <code>geografia.html</code>.
+    Il menu con i pulsanti Home, Geografia, Economia e Cultura deve essere presente in tutte le pagine del sito.
+  </div>
+</section>
+
+<section class="card">
+  <h2>2. Consegna del lavoro e uso degli LLM</h2>
+  <p>Il lavoro prodotto deve essere consegnato secondo le indicazioni del docente, ad esempio tramite piattaforma didattica, cloud, repository o cartella condivisa.</p>
+  <h3>Come consegnare i file</h3>
+  <ol>
+    <li>Apri la piattaforma o la cartella indicata dal docente.</li>
+    <li>Accedi allo spazio del corso o dell'attività.</li>
+    <li>Apri la consegna, la cartella condivisa o il repository indicato.</li>
+    <li>Seleziona il comando per allegare o caricare i file.</li>
+    <li>Carica i file prodotti: <code>index.html</code>, <code>geografia.html</code>, <code>economia.html</code>, <code>cultura.html</code> ed eventuali immagini.</li>
+    <li>Controlla che tutti i file siano presenti prima di completare la consegna.</li>
+  </ol>
+  <div class="alert">
+    Puoi usare strumenti di intelligenza artificiale come ChatGPT, Gemini o Claude e puoi consultare il web. Puoi anche copiare parti di codice o testi come base di lavoro, ma devi poi controllarli, adattarli al tuo Stato, capirne il significato e renderli coerenti con il sito. Il docente potrà chiederti di spiegare ciò che hai inserito.
+  </div>
+</section>
+
+<section class="card">
+  <h2>3. Uso corretto di IA e web</h2>
+  <p>Gli strumenti di IA e le pagine web possono aiutarti, ma il sito finale deve essere ordinato, comprensibile e adatto alla consegna scolastica. Non basta incollare contenuti: devi selezionare le informazioni utili e inserirle in modo chiaro.</p>
+  <h3>Prompt utili per ChatGPT, Gemini o Claude</h3>
+  <ul>
+    <li>"Spiegami in modo semplice la geografia del/della [Stato], adatta a studenti in fase iniziale di apprendimento di HTML e CSS."</li>
+    <li>"Riassumi l'economia del/della [Stato] in due paragrafi chiari, senza linguaggio troppo difficile."</li>
+    <li>"Correggi questo codice HTML e spiegami l'errore: [incolla codice]."</li>
+    <li>"Trasforma queste informazioni in un testo originale e comprensibile per una pagina web scolastica."</li>
+  </ul>
+  <h3>Regola di controllo</h3>
+  <p>Dopo aver usato IA o web, verifica sempre tre aspetti: il testo è comprensibile, le informazioni sono plausibili, il codice funziona nel browser.</p>
+</section>
+
+<section class="card">
+  <h2>4. Scelta dello stile grafico</h2>
+  <p>Per migliorare l'aspetto del sito puoi scegliere uno stile coerente con lo Stato studiato. Il simulatore genera un CSS di base, ma puoi modificarlo cambiando colori, bordi, spaziature e immagini.</p>
+  <ul>
+    <li><strong>Stile istituzionale:</strong> blu, bianco, grigio; adatto a ricerche ordinate e sobrie.</li>
+    <li><strong>Stile natura:</strong> verde, azzurro, beige; adatto a Stati con paesaggi, foreste, mare o montagne.</li>
+    <li><strong>Stile caldo:</strong> rosso, arancione, giallo; adatto a Stati con forte identità culturale o climatica.</li>
+  </ul>
+  <p>Attenzione: i colori devono rendere il testo leggibile. Evita sfondi troppo scuri con testo poco contrastato.</p>
+</section>
+
+<section class="card">
+  <h2>5. Rubrica rapida di autovalutazione formativa</h2>
+  <p>Questa rubrica serve allo studente per controllare rapidamente il proprio lavoro durante lo sviluppo. Non sostituisce la griglia di valutazione del docente presente al punto 12.</p>
+  <table style="width:100%;border-collapse:collapse;background:white">
+    <tr><th style="border:1px solid #c9d8ea;padding:8px">Indicatore</th><th style="border:1px solid #c9d8ea;padding:8px">Da migliorare</th><th style="border:1px solid #c9d8ea;padding:8px">Adeguato</th><th style="border:1px solid #c9d8ea;padding:8px">Buono</th></tr>
+    <tr><td style="border:1px solid #c9d8ea;padding:8px">Pagine HTML</td><td style="border:1px solid #c9d8ea;padding:8px">Mancano file</td><td style="border:1px solid #c9d8ea;padding:8px">Sono presenti 4 pagine</td><td style="border:1px solid #c9d8ea;padding:8px">4 pagine complete e ordinate</td></tr>
+    <tr><td style="border:1px solid #c9d8ea;padding:8px">Menu</td><td style="border:1px solid #c9d8ea;padding:8px">Link incompleti</td><td style="border:1px solid #c9d8ea;padding:8px">Menu presente</td><td style="border:1px solid #c9d8ea;padding:8px">Menu presente e funzionante in tutte le pagine</td></tr>
+    <tr><td style="border:1px solid #c9d8ea;padding:8px">Contenuti</td><td style="border:1px solid #c9d8ea;padding:8px">Troppo brevi</td><td style="border:1px solid #c9d8ea;padding:8px">Informazioni essenziali</td><td style="border:1px solid #c9d8ea;padding:8px">Informazioni chiare, spiegate e coerenti</td></tr>
+    <tr><td style="border:1px solid #c9d8ea;padding:8px">CSS</td><td style="border:1px solid #c9d8ea;padding:8px">Assente o non collegato</td><td style="border:1px solid #c9d8ea;padding:8px">CSS collegato</td><td style="border:1px solid #c9d8ea;padding:8px">Grafica ordinata e leggibile</td></tr>
+  </table>
+</section>
+
+<section class="card">
+  <h2>6. Prompt visibili per gli LLM</h2>
+  <p>Questi prompt possono essere copiati in ChatGPT, Gemini o Claude. Lo studente deve poi controllare il risultato e adattarlo al proprio sito.</p>
+  <pre><code>Prompt 1 - Ricerca dei contenuti
+Aiutami a scrivere una ricerca semplice sullo Stato [NOME STATO] per un mini-sito HTML scolastico.
+Dividi le informazioni in: introduzione, geografia, economia, cultura.
+Usa un linguaggio adatto a studenti in fase iniziale di apprendimento di HTML e CSS.</code></pre>
+  <pre><code>Prompt 2 - Correzione del codice
+Controlla questo codice HTML e spiegami gli errori in modo semplice.
+Non riscrivere tutto subito: prima indicami cosa non funziona.
+Codice: [INCOLLA QUI IL CODICE]</code></pre>
+  <pre><code>Prompt 3 - Miglioramento del CSS
+Propormi uno stile CSS semplice, leggibile e adatto a un mini-sito su [NOME STATO].
+Usa colori coerenti con lo Stato scelto e commenta ogni regola CSS.</code></pre>
+</section>
+
+<section class="card">
+  <h2>7. Pagine aggiuntive facoltative</h2>
+  <p>Il sito minimo contiene quattro pagine. È possibile però aumentare il numero di pagine, se il docente lo richiede o se lo studente vuole approfondire.</p>
+  <ul>
+    <li><code>storia.html</code> - cenni storici principali.</li>
+    <li><code>turismo.html</code> - luoghi da visitare.</li>
+    <li><code>curiosita.html</code> - aspetti particolari dello Stato.</li>
+    <li><code>sport.html</code> - sport diffusi e personaggi importanti.</li>
+  </ul>
+  <p>Ogni nuova pagina deve avere lo stesso menu delle altre pagine, altrimenti il sito diventa difficile da navigare.</p>
+</section>
+
+<section class="card">
+  <h2>8. CSS personalizzato per ogni studente</h2>
+  <p>Ogni studente può avere un CSS diverso scegliendo uno stile dal menu a tendina nella sezione "Inserisci i dati del tuo Stato": blu istituzionale, verde natura, caldo, scuro, mare, deserto, tecnologico oppure Altro CSS personalizzato. Il CSS viene inserito direttamente dentro ogni pagina, tra i tag <code>&lt;style&gt;</code> e <code>&lt;/style&gt;</code>, così non serve creare un file CSS separato.</p>
+  <div class="alert">
+    Il CSS va scritto nella parte <code>&lt;head&gt;</code> della pagina HTML, non dentro il <code>&lt;body&gt;</code>.
+  </div>
+</section>
+
+<section class="card">
+  <h2>9. CSS personalizzato: uso guidato</h2>
+  <p>La voce <strong>Altro (CSS personalizzato)</strong> permette allo studente di progettare un proprio foglio di stile. È utile per chi vuole andare oltre gli stili predefiniti.</p>
+  <p>Regole minime da rispettare:</p>
+  <ul>
+    <li>il testo deve rimanere leggibile;</li>
+    <li>il menu deve restare in alto e visibile;</li>
+    <li>le immagini non devono uscire dalla pagina;</li>
+    <li>il footer con il copyright deve rimanere presente.</li>
+  </ul>
+</section>
+
+<section class="card">
+  <h2>10. Passaggi da seguire con il programma Blocco note</h2>
+  <div class="step"><div class="num">1</div><div><strong>Prima crea la cartella del progetto.</strong><br>Per esempio avente nome: <code>Giappone</code>, <code>Francia</code>, <code>Brasile</code>. Dentro questa cartella creerai tutti i file.</div></div>
+  <div class="step"><div class="num">2</div><div><strong>Crea la sottocartella immagini.</strong><br>Dentro la cartella creata: crea una cartella chiamata esattamente <code>immagini</code>. Qui metterai bandiera, mappa ed eventuali immagini culturali.</div></div>
+  <div class="step">
+  <div class="num">3</div>
+  <div>
+    <strong>Apri Blocco note.</strong><br>
+    Scrivi o copia il codice generato dal simulatore.
+    Quando salvi, scegli <strong>File &gt; Salva con nome</strong>.<br>
+    <span class="small">Non usare Word: aggiunge formattazioni non adatte al codice HTML.</span>
+  </div>
+</div>
+  <div class="step"><div class="num">4</div><div><strong>Salva correttamente.</strong><br>Nel campo "Nome file" scrivi, ad esempio, <code>index.html</code>. Nel campo "Salva come" scegli <strong>Tutti i file</strong>, non "Documento di testo".</div></div>
+  <div class="step"><div class="num">5</div><div><strong>Inserisci il menu in tutte le pagine.</strong><br>I pulsanti Home, Geografia, Economia e Cultura devono comparire in <code>index.html</code>, <code>geografia.html</code>, <code>economia.html</code> e <code>cultura.html</code>.</div></div>
+  <div class="step"><div class="num">6</div><div><strong>Controlla nel browser.</strong><br>Dopo ogni modifica salva il file e aggiorna la pagina nel browser con F5. Non andare avanti se la pagina corrente non funziona.</div></div>
+</section>
+
+<section class="card" id="sezione-avanzamento">
+  <h2>11. Stati di avanzamento del progetto</h2>
+  <p>Questa sezione aiuta lo studente a capire che cosa è già pronto e che cosa deve ancora essere migliorato. Gli stati si aggiornano quando si clicca su <strong>Controlla requisiti</strong> o <strong>Genera codice</strong>.</p>
+
+  <div class="progress-score" id="progressScore">Avanzamento: 0%</div>
+  <div class="progress-bar-wrap">
+    <div class="progress-bar" id="progressBar"></div>
+  </div>
+
+  <div class="progress-dashboard">
+    <div class="status-card status-neutral" id="statoStruttura">
+      <div class="status-icon">⏳</div>
+      <div>
+        <h3>Struttura del sito</h3>
+        <p>Da verificare: quattro pagine HTML e menu comune.</p>
+      </div>
+    </div>
+
+    <div class="status-card status-neutral" id="statoContenuti">
+      <div class="status-icon">⏳</div>
+      <div>
+        <h3>Contenuti</h3>
+        <p>Da verificare: testi sufficienti per Home, Geografia, Economia e Cultura.</p>
+      </div>
+    </div>
+
+    <div class="status-card status-neutral" id="statoCss">
+      <div class="status-icon">⏳</div>
+      <div>
+        <h3>CSS e grafica</h3>
+        <p>Da verificare: stile scelto e leggibilità della pagina.</p>
+      </div>
+    </div>
+
+    <div class="status-card status-neutral" id="statoImmagini">
+      <div class="status-icon">⏳</div>
+      <div>
+        <h3>Immagini</h3>
+        <p>Da verificare: nomi dei file e cartella immagini.</p>
+      </div>
+    </div>
+
+    <div class="status-card status-neutral" id="statoCopyright">
+      <div class="status-icon">⏳</div>
+      <div>
+        <h3>Copyright</h3>
+        <p>Da verificare: Nome e Cognome nel footer.</p>
+      </div>
+    </div>
+
+    <div class="status-card status-neutral" id="statoConsegna">
+      <div class="status-icon">⏳</div>
+      <div>
+        <h3>Consegna giornaliera</h3>
+        <p>Da verificare: file pronti per la consegna.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="card" id="sezione-valutazione">
+  <h2>12. Griglia di valutazione del docente collegata al simulatore</h2>
+  <p>La valutazione non dipende solo dal fatto che il codice funzioni. Conta anche il livello di autonomia, personalizzazione e approfondimento dei contenuti.</p>
+
+  <div class="alert">
+    Chi usa soltanto i testi proposti dal simulatore, senza personalizzare e approfondire, potrà raggiungere la sufficienza. Una valutazione superiore richiede contenuti rielaborati e corretti, ricavati da ricerca personale, dal web o da strumenti di IA.
+  </div>
+
+  <table class="valutazione-table">
+    <thead>
+      <tr>
+        <th>Livello</th>
+        <th>Descrizione</th>
+        <th>Indicazione di voto</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Base</td>
+        <td>Il sito funziona, contiene le quattro pagine, il menu e i testi minimi proposti dal simulatore.</td>
+        <td>Sufficienza</td>
+      </tr>
+      <tr>
+        <td>Intermedio</td>
+        <td>Lo studente personalizza i testi, corregge le informazioni, migliora chiarezza e completezza dei contenuti.</td>
+        <td>Valutazione superiore alla sufficienza</td>
+      </tr>
+      <tr>
+        <td>Avanzato</td>
+        <td>Lo studente svolge una vera ricerca tramite web o IA, rielabora i contenuti, cura grafica, immagini, ordine e navigabilità, ed è in grado di estendere il sito aggiungendo una o più pagine web oltre le quattro di base (es. storia, turismo, curiosità).</td>
+        <td>Valutazione alta</td>
+      </tr>
+      <tr>
+        <td>Bonus</td>
+        <td>+1 punto se sceglie "Altro" come Stato; +1 punto se sceglie "Altro CSS personalizzato".</td>
+        <td>Fino a +2 punti bonus</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="valutazione-box">
+    <h3>Stima automatica orientativa</h3>
+    <p>Questa stima non sostituisce la valutazione del docente, ma aiuta lo studente a capire come migliorare il proprio lavoro.</p>
+    <div id="stimaValutazione" class="punteggio-stimato">Stima: da calcolare</div>
+    <ul id="dettaglioValutazione">
+      <li>Compila i campi e clicca su "Controlla requisiti".</li>
+    </ul>
+  </div>
+</section>
+
+<section class="card" id="sezione-dati">
+  <h2>13. Inserisci i dati del tuo Stato</h2>
+  <p class="small">Compila i campi. Il simulatore genera il codice delle quattro pagine con CSS incorporato. Gli esempi possono essere sostituiti dallo studente con parole proprie.</p>
+
+  <div class="alert">
+    Lo Stato deve essere scelto dallo studente dal menu a tendina. Se lo Stato non è presente, scegliere <strong>Altro</strong> e inserirlo manualmente.
+    <br><br>
+    Il Giappone è stato utilizzato dal docente come esempio guidato durante la spiegazione, quindi non può essere scelto per il progetto. Anche se inserito manualmente, il sistema lo bloccherà.
+  </div>
+
+  <div class="grid">
+    <div>
+      <label for="csvPreset">Stato scelto dallo studente</label>
+      <select id="csvPreset" onchange="caricaPresetCSV()">
+        <option value="">-- Scegli uno Stato --</option>
+      </select>
+    </div>
+
+    <div>
+      <label for="tema">Menu a tendina: scegli il foglio di stile CSS</label>
+      <select id="tema" onchange="gestioneCssPersonalizzato(); marcaCodiceDaRigenerare();">
+        <option value="blu">Blu istituzionale</option>
+        <option value="verde">Verde natura</option>
+        <option value="caldo">Caldo rosso/arancio</option>
+        <option value="scuro">Scuro elegante</option>
+        <option value="mare">Mare e isole</option>
+        <option value="deserto">Deserto e sabbia</option>
+        <option value="tecnologico">Tecnologico</option>
+        <option value="altrocss">Altro (CSS personalizzato)</option>
+      </select>
+      <p class="small">Il CSS viene incorporato automaticamente tra i tag &lt;style&gt; e &lt;/style&gt; delle pagine generate.</p>
+    </div>
+  </div>
+
+  <div id="boxCssPersonalizzato" class="css-custom-box">
+    <h3>CSS personalizzato dello studente</h3>
+    <p class="small">Questo riquadro compare solo se scegli "Altro (CSS personalizzato)". È collocato sotto la scelta dello stile per non spostare i campi principali dello Stato.</p>
+    <textarea id="cssPersonalizzato" oninput="marcaCodiceDaRigenerare()">body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f4f7fb;
+  color: #222222;
+}
+
+header {
+  background-color: #1f4e79;
+  color: white;
+  padding: 25px;
+  text-align: center;
+}
+
+.menu {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.menu-button {
+  background-color: #2f75b5;
+  color: white;
+  text-decoration: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+}
+
+.menu-button:hover {
+  background-color: #163b5c;
+}
+
+main {
+  max-width: 900px;
+  margin: 25px auto;
+  padding: 0 15px;
+}
+
+.scheda {
+  background-color: white;
+  border: 1px solid #c9d8ea;
+  border-radius: 12px;
+  padding: 20px;
+}
+
+.immagine {
+  max-width: 280px;
+  width: 100%;
+  height: auto;
+}</textarea>
+    <p class="small">Mantieni sempre testo leggibile, menu visibile, immagini proporzionate e footer presente.</p>
+  </div>
+
+  <div class="grid">
+    <div id="sezione-home">
+      <label for="stato">Nome dello Stato</label>
+      <input id="stato" value="" readonly>
+      <p class="small">Il nome dello Stato viene scelto dal menu a tendina superiore. Se scegli "Altro", questo campo diventa modificabile. Il campo è bloccato quando scegli uno Stato dal menu.</p>
+
+      <label for="studente">Nome e Cognome dello studente</label>
+      <input id="studente" value="" placeholder="Es. Mario Rossi">
+      <p class="small">Obbligatorio: questo nome comparirà nel copyright del footer.</p>
+
+      <label for="capitale">Capitale</label>
+      <input id="capitale" value="">
+
+      <label for="continente">Continente</label>
+      <input id="continente" value="">
+
+      <label for="lingua">Lingua ufficiale</label>
+      <input id="lingua" value="">
+
+      <label for="moneta">Moneta</label>
+      <input id="moneta" value="">
+
+      <label for="bandiera">File bandiera nella cartella immagini</label>
+      <input id="bandiera" value="bandiera.png">
+
+      <label for="mappa">File mappa nella cartella immagini</label>
+      <input id="mappa" value="mappa.png">
+
+      <label for="culturaImg">File immagine cultura nella cartella immagini</label>
+      <input id="culturaImg" value="cultura.png">
+    </div>
+
+    <div>
+      <label for="intro">Introduzione Home - almeno 5 righe</label>
+      <textarea id="intro">Scrivi qui l'introduzione dello Stato scelto.
+Presenta lo Stato con parole semplici.
+Indica dove si trova e perché è interessante.
+Aggiungi qualche informazione generale.
+Completa il testo con frasi chiare e ordinate.</textarea>
+
+      <label id="sezione-geografia" for="geo">Geografia - posizione, confini, clima, territorio</label>
+      <textarea id="geo">Scrivi qui due paragrafi sulla geografia dello Stato scelto.
+Indica continente, posizione, confini, clima e caratteristiche del territorio.</textarea>
+
+      <label id="sezione-economia" for="eco">Economia - moneta, attività, risorse, dati interessanti</label>
+      <textarea id="eco">Scrivi qui due paragrafi sull'economia dello Stato scelto.
+Indica moneta, attività economiche principali, risorse e dati interessanti.</textarea>
+
+      <label id="sezione-cultura" for="cult">Cultura - lingua, tradizioni, cucina, curiosità</label>
+      <textarea id="cult">Scrivi qui due paragrafi sulla cultura dello Stato scelto.
+Indica lingua, tradizioni, cucina e almeno una curiosità spiegata bene.</textarea>
+    </div>
+  </div>
+
+  <button id="btnGeneraCodice" onclick="genera(true)" class="ok">Genera codice</button>
+  <button onclick="controlla()" class="secondary">Controlla requisiti</button>
+  <div id="esito"></div>
+</section>
+
+<section class="card">
+  <h2>14. Come costruire le altre pagine</h2>
+  <p>Dopo avere creato <code>index.html</code>, le altre pagine si costruiscono riutilizzando la stessa struttura generale: intestazione, menu in alto, contenuto centrale e piè di pagina.</p>
+  <h3>Metodo consigliato con il Blocco note</h3>
+  <ol>
+    <li>Apri il file <code>index.html</code>.</li>
+    <li>Salvalo con un nuovo nome, per esempio <code>geografia.html</code>.</li>
+    <li>Cambia il titolo della pagina dentro <code>&lt;title&gt;</code> e dentro <code>&lt;h1&gt;</code>.</li>
+    <li>Lascia invariato il menu, perché deve comparire in tutte le pagine.</li>
+    <li>Sostituisci il contenuto centrale con i paragrafi richiesti per quella pagina.</li>
+    <li>Ripeti lo stesso procedimento per <code>economia.html</code> e <code>cultura.html</code>.</li>
+  </ol>
+  <div class="alert">
+    Il menu deve rimanere uguale in tutte le pagine. Cambia solo il contenuto centrale: geografia, economia o cultura.
+  </div>
+</section>
+
+<section class="card">
+  <h2>15. Dove collocare il CSS nelle pagine HTML</h2>
+  <p>Per semplificare il lavoro con il Blocco note, in questa attività il CSS viene inserito direttamente dentro ogni file HTML, nella parte <code>&lt;head&gt;</code>.</p>
+  <p>La struttura corretta è questa:</p>
+  <pre><code>&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;title&gt;Giappone&lt;/title&gt;
+
+  &lt;style&gt;
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f7fb;
+    }
+  &lt;/style&gt;
+&lt;/head&gt;</code></pre>
+  <div class="alert">
+    Il CSS scritto tra <code>&lt;style&gt;</code> e <code>&lt;/style&gt;</code> controlla colori, spazi, bordi, pulsanti e disposizione del menu.
+  </div>
+</section>
+
+<section class="card">
+  <h2>16. Come si realizza il menu con i CSS</h2>
+  <p>Il menu deve stare in alto in tutte le pagine. Non deve essere un elenco puntato. Si usano collegamenti HTML <code>&lt;a&gt;</code>, ma il CSS li trasforma graficamente in pulsanti.</p>
+  <p>Codice HTML del menu:</p>
+  <pre><code>&lt;nav class="menu"&gt;
+  &lt;a class="menu-button" href="index.html"&gt;Home&lt;/a&gt;
+  &lt;a class="menu-button" href="geografia.html"&gt;Geografia&lt;/a&gt;
+  &lt;a class="menu-button" href="economia.html"&gt;Economia&lt;/a&gt;
+  &lt;a class="menu-button" href="cultura.html"&gt;Cultura&lt;/a&gt;
+&lt;/nav&gt;</code></pre>
+  <p>CSS essenziale del menu:</p>
+  <pre><code>.menu {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+.menu-button {
+  background-color: #2f75b5;
+  color: white;
+  text-decoration: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-weight: bold;
+}
+
+.menu-button:hover {
+  background-color: #163b5c;
+  transform: scale(1.06);
+}</code></pre>
+</section>
+
+<section class="card">
+  <h2>17. Copyright obbligatorio nel footer</h2>
+  <p>Ogni pagina del sito deve contenere nel footer il copyright con il Nome e Cognome dello studente.</p>
+  <pre><code>&lt;footer&gt;
+  &lt;p&gt;Mini-sito realizzato con HTML e CSS.&lt;/p&gt;
+  &lt;p&gt;&amp;copy; Mario Rossi - Progetto didattico HTML e CSS&lt;/p&gt;
+&lt;/footer&gt;</code></pre>
+  <div class="alert" id="avvisoCopyright">
+    Sostituisci "Mario Rossi" con il tuo Nome e Cognome. Il copyright personale è obbligatorio.
+  </div>
+</section>
+
+<section class="card" id="sezione-codice">
+  <h2>18. Codice generato</h2>
+  <div class="tabs">
+    <button onclick="mostra('index.html')" class="active" id="tab-index.html">index.html</button>
+    <button onclick="mostra('geografia.html')" id="tab-geografia.html">geografia.html</button>
+    <button onclick="mostra('economia.html')" id="tab-economia.html">economia.html</button>
+    <button onclick="mostra('cultura.html')" id="tab-cultura.html">cultura.html</button>
+  </div>
+  <button onclick="copia()">Copia codice visualizzato</button>
+  <button onclick="scarica()">Scarica file visualizzato</button>
+  <button onclick="scaricaTutti()" class="ok">Scarica tutti i file HTML</button>
+  <div id="messaggio-copia" class="success" style="display:none;margin-top:8px;">Codice copiato.</div>
+  <p class="small">Il codice viene generato per tutte le pagine. Usa i pulsanti sopra per visualizzare <code>index.html</code>, <code>geografia.html</code>, <code>economia.html</code> e <code>cultura.html</code>.</p>
+  <pre><code id="codice"></code></pre>
+</section>
+
+<section class="card">
+  <h2 id="titoloAnteprima">19. Anteprima rapida della Home</h2>
+  <p class="small">L'anteprima serve a controllare l'aspetto generale della pagina selezionata. I link funzioneranno correttamente quando i file saranno salvati tutti nella stessa cartella.</p>
+  <div id="anteprima" class="preview-frame" role="region" aria-label="Anteprima del sito"></div>
+</section>
+
+<section class="card">
+  <h2>20. Se non funziona</h2>
+  <ul>
+    <li>Se il file non si apre, controlla che non sia stato salvato come <code>index.html.txt</code>.</li>
+    <li>Se un link non funziona, controlla che il nome scritto in <code>href</code> sia identico al nome del file.</li>
+    <li>Se l'immagine non appare, controlla che il file sia nella cartella <code>immagini</code> e che il nome sia scritto correttamente.</li>
+    <li>Se il CSS non viene applicato, controlla che il blocco <code>&lt;style&gt; ... &lt;/style&gt;</code> sia dentro il tag <code>&lt;head&gt;</code> della pagina.</li>
+  </ul>
+</section>
+
+<section class="card">
+  <h2>21. Trucco didattico: lavorare per micro-obiettivi</h2>
+  <p>La miglioria didattica più importante è trasformare il simulatore in un percorso a stati di avanzamento. Lo studente non dovrebbe solo generare codice, ma vedere chiaramente a che punto si trova: struttura creata, menu funzionante, CSS applicato, immagini controllate, contenuti completati, consegna pronta.</p>
+  <p>In questo modo il software diventa un vero simulatore didattico: non sostituisce il lavoro dello studente, ma lo guida con piccoli obiettivi verificabili. Il docente può chiedere di consegnare ogni giorno lo stato raggiunto, evitando che gli studenti arrivino alla fine con un sito copiato ma non compreso.</p>
+</section>
+
+<section class="card">
+  <h2>22. Checklist finale per lo studente</h2>
+  <div class="checklist-finale">
+    <label><input type="checkbox"> Ho creato una cartella con il nome dello Stato.</label>
+    <label><input type="checkbox"> Ho creato i quattro file HTML richiesti.</label>
+    <label><input type="checkbox"> Ho inserito il CSS tra i tag <code>&lt;style&gt;</code> e <code>&lt;/style&gt;</code> nelle pagine HTML.</label>
+    <label><input type="checkbox"> Ho creato la cartella <code>immagini</code>.</label>
+    <label><input type="checkbox"> Tutte le pagine hanno il menu di navigazione.</label>
+    <label><input type="checkbox"> Le immagini sono visibili nel browser (Google Chrome, Edge,...) oppure è presente il riquadro di avviso.</label>
+    <label><input type="checkbox"> I contenuti copiati da IA o dal web sono stati controllati, adattati e compresi.</label>
+    <label><input type="checkbox"> Ho inserito nel footer il copyright con il mio Nome e Cognome.</label>
+    <label><input type="checkbox"> Ho caricato o consegnato i file prodotti secondo le indicazioni del docente.</label>
+  </div>
+  <button type="button" class="secondary" onclick="resettaSoloCheckbox()">
+  Resetta solo le spunte della checklist
+</button>
+</section>
+
+</main>
+
+<div id="modalAnteprima" class="preview-modal" role="dialog" aria-modal="true" aria-labelledby="modalAnteprimaTitolo">
+  <div class="preview-modal-box">
+    <h3 id="modalAnteprimaTitolo">Pagina non ancora disponibile</h3>
+    <p id="modalAnteprimaTesto">La pagina selezionata non è ancora disponibile. Completa prima i dati della sezione corretta, poi genera il codice.</p>
+    <div class="preview-modal-actions">
+      <button type="button" class="secondary" onclick="vaiAllaSezione()">Vai ai campi della pagina</button>
+      <button type="button" class="ok" onclick="generaPaginaDaModal()">Genera comunque il codice</button>
+      <button type="button" class="danger" onclick="chiudiModaleAnteprima()">Chiudi</button>
+    </div>
+  </div>
+</div>
+
+
+<script>
+const STATI = [
+  ["Francia","Parigi","Europa","francese","euro"],
+  ["Germania","Berlino","Europa","tedesco","euro"],
+  ["Spagna","Madrid","Europa","spagnolo","euro"],
+  ["Regno Unito","Londra","Europa","inglese","sterlina britannica"],
+  ["Portogallo","Lisbona","Europa","portoghese","euro"],
+  ["Grecia","Atene","Europa","greco","euro"],
+  ["Brasile","Brasilia","America del Sud","portoghese","real brasiliano"],
+  ["Argentina","Buenos Aires","America del Sud","spagnolo","peso argentino"],
+  ["Messico","Città del Messico","America del Nord","spagnolo","peso messicano"],
+  ["Canada","Ottawa","America del Nord","inglese e francese","dollaro canadese"],
+  ["Stati Uniti","Washington D.C.","America del Nord","inglese","dollaro statunitense"],
+  ["Egitto","Il Cairo","Africa","arabo","sterlina egiziana"],
+  ["Marocco","Rabat","Africa","arabo e berbero","dirham marocchino"],
+  ["Sudafrica","Pretoria","Africa","inglese e altre lingue","rand"],
+  ["Australia","Canberra","Oceania","inglese","dollaro australiano"],
+  ["Nuova Zelanda","Wellington","Oceania","inglese e maori","dollaro neozelandese"],
+  ["India","Nuova Delhi","Asia","hindi e inglese","rupia indiana"],
+  ["Cina","Pechino","Asia","cinese mandarino","yuan"],
+  ["Corea del Sud","Seul","Asia","coreano","won sudcoreano"]
+];
+
+const files = {};
+const pagineGenerate = {};
+let current = "index.html";
+let codiceGenerato = false;
+let paginaRichiestaModal = "index.html";
+let anteprimaShadowRoot = null;
+
+const PAGINE_BASE = ["index.html", "geografia.html", "economia.html", "cultura.html"];
+
+function esc(s){
+  return String(s ?? "")
+    .replaceAll("&","&amp;")
+    .replaceAll("<","&lt;")
+    .replaceAll(">","&gt;")
+    .replaceAll('"',"&quot;");
+}
+
+function v(id){
+  const el = document.getElementById(id);
+  return el ? el.value.trim() : "";
+}
+
+function studenteValido(){
+  const nomeOriginale = v("studente").replace(/\s+/g, " ").trim();
+  const nome = nomeOriginale.toLowerCase();
+  const parti = nomeOriginale.split(" ").filter(function(parte){
+    return parte.length >= 2;
+  });
+
+  return parti.length >= 2 &&
+         nome !== "mario rossi" &&
+         nome !== "nome cognome";
+}
+
+function testoAncoraPredefinito(id){
+  const testiDefault = {
+    intro: `Scrivi qui l'introduzione dello Stato scelto.
+Presenta lo Stato con parole semplici.
+Indica dove si trova e perché è interessante.
+Aggiungi qualche informazione generale.
+Completa il testo con frasi chiare e ordinate.`,
+    geo: `Scrivi qui due paragrafi sulla geografia dello Stato scelto.
+Indica continente, posizione, confini, clima e caratteristiche del territorio.`,
+    eco: `Scrivi qui due paragrafi sull'economia dello Stato scelto.
+Indica moneta, attività economiche principali, risorse e dati interessanti.`,
+    cult: `Scrivi qui due paragrafi sulla cultura dello Stato scelto.
+Indica lingua, tradizioni, cucina e almeno una curiosità spiegata bene.`
+  };
+
+  const el = document.getElementById(id);
+  if(!el || !testiDefault[id]) return false;
+
+  return el.value.trim() === testiDefault[id].trim();
+}
+function testoValido(id, minParagrafi){
+  return !testoAncoraPredefinito(id) && contaParagrafi(v(id)) >= minParagrafi;
+}
+
+function paginaCompilata(file){
+  if(file === "index.html"){
+    return !testoAncoraPredefinito("intro") && v("intro").length > 80;
+  }
+
+  if(file === "geografia.html"){
+    return !testoAncoraPredefinito("geo") && v("geo").length > 80;
+  }
+
+  if(file === "economia.html"){
+    return !testoAncoraPredefinito("eco") && v("eco").length > 80;
+  }
+
+  if(file === "cultura.html"){
+    return !testoAncoraPredefinito("cult") && v("cult").length > 80;
+  }
+
+  return true;
+}
+
+function evidenziaCampo(id){
+  const el = document.getElementById(id);
+  if(!el) return;
+
+  el.scrollIntoView({behavior:"smooth", block:"center"});
+  el.focus();
+
+  el.classList.add("campo-guidato");
+
+  setTimeout(() => {
+    el.classList.remove("campo-guidato");
+  }, 5000);
+}
+
+function aggiornaCopyright(){
+  const valido = studenteValido();
+  const avviso = document.getElementById("avvisoCopyright");
+  if(avviso){
+    avviso.style.display = valido ? "none" : "block";
+  }
+
+  const esito = document.getElementById("esito");
+  if(valido && esito && esito.textContent.includes("Nome e Cognome")){
+    esito.innerHTML = "";
+  }
+}
+
+function isPaginaDisponibile(file){
+  return !!(files[file] && pagineGenerate[file]);
+}
+
+function aggiornaStatoGlobaleCodice(){
+  codiceGenerato = Object.values(pagineGenerate).some(Boolean);
+}
+
+function marcaCodiceDaRigenerare(){
+  PAGINE_BASE.forEach(file => { pagineGenerate[file] = false; });
+  codiceGenerato = false;
+  const codice = document.getElementById("codice");
+  if(codice && !isPaginaDisponibile(current)) codice.textContent = "";
+}
+
+function nomePaginaDidattico(file){
+  const map = {
+    "index.html":"Home",
+    "geografia.html":"Geografia",
+    "economia.html":"Economia",
+    "cultura.html":"Cultura"
+  };
+  return map[file] || file || "pagina selezionata";
+}
+
+function aggiornaTitoloAnteprima(file){
+  const titolo = document.getElementById("titoloAnteprima");
+  if(!titolo) return;
+  const nome = nomePaginaDidattico(file || current || "index.html");
+  titolo.textContent = "19. Anteprima rapida della " + nome;
+}
+
+function campoTestoPerPagina(file){
+  const map = {
+    "index.html":"intro",
+    "geografia.html":"geo",
+    "economia.html":"eco",
+    "cultura.html":"cult"
+  };
+  return map[file] || null;
+}
+
+function sezionePerPagina(file){
+  const map = {
+    "index.html":"sezione-home",
+    "geografia.html":"sezione-geografia",
+    "economia.html":"sezione-economia",
+    "cultura.html":"sezione-cultura"
+  };
+  return map[file] || "sezione-dati";
+}
+
+function apriModaleAnteprima(file){
+  paginaRichiestaModal = file || current || "index.html";
+  const modal = document.getElementById("modalAnteprima");
+  const testo = document.getElementById("modalAnteprimaTesto");
+  if(testo){
+    testo.textContent = "La pagina " + nomePaginaDidattico(paginaRichiestaModal) + " non è ancora disponibile. Completa prima i dati della sezione corretta, poi genera il codice.";
+  }
+  if(modal) modal.classList.add("show");
+}
+
+function chiudiModaleAnteprima(){
+  const modal = document.getElementById("modalAnteprima");
+  if(modal) modal.classList.remove("show");
+}
+
+function vaiAllaSezione(){
+  chiudiModaleAnteprima();
+
+  const pagina = paginaRichiestaModal || current || "index.html";
+  const idSezione = sezionePerPagina(pagina);
+
+  const sezione = document.getElementById(idSezione);
+  if(sezione){
+    sezione.scrollIntoView({behavior:"smooth", block:"center"});
+    sezione.classList.add("campo-guidato");
+
+    setTimeout(() => {
+      sezione.classList.remove("campo-guidato");
+    }, 5000);
+  }
+
+  mostraGuidaCompilazione(pagina);
+}
+
+function mostraGuidaCompilazione(pagina){
+  const box = document.getElementById("guidaCompilazione");
+  if(!box) return;
+
+  const guide = {
+    "index.html": "Completa la Home: introduzione, capitale, continente, lingua, moneta e bandiera.",
+    "geografia.html": "Completa Geografia: cerca posizione geografica, continente, confini, clima e caratteristiche del territorio.",
+    "economia.html": "Completa Economia: cerca moneta, attività economiche principali, risorse e dati interessanti.",
+    "cultura.html": "Completa Cultura: cerca lingua, tradizioni, cucina e una curiosità spiegata bene."
+  };
+
+  box.textContent = guide[pagina] || "";
+  box.style.display = "block";
+}
+
+function generaPaginaDaModal(){
+  current = paginaRichiestaModal || current || "index.html";
+  chiudiModaleAnteprima();
+  genera(false);
+  mostra(current);
+}
+
+function gestisciClickAnteprima(file){
+  const pagina = file || "index.html";
+  if(isPaginaDisponibile(pagina)){
+    mostra(pagina);
+  } else {
+    current = pagina;
+    evidenziaTabCorrente();
+    apriModaleAnteprima(pagina);
+  }
+  return false;
+}
+
+function htmlPerAnteprima(html){
+  return String(html || "");
+}
+
+function inizializzaMenuStati(){
+  const select = document.getElementById("csvPreset");
+  if(!select) return;
+  select.innerHTML = '<option value="">-- Scegli uno Stato --</option>';
+  STATI.forEach((r, i) => {
+    const opt = document.createElement("option");
+    opt.value = String(i);
+    opt.textContent = r[0] + " - " + r[2];
+    select.appendChild(opt);
+  });
+  const altro = document.createElement("option");
+  altro.value = "altro";
+  altro.textContent = "Altro (non presente in lista)";
+  select.appendChild(altro);
+}
+
+function caricaPresetCSV(){
+  const select = document.getElementById("csvPreset");
+  const stato = document.getElementById("stato");
+  if(!select || !stato) return;
+
+  marcaCodiceDaRigenerare();
+
+  if(select.value === "altro"){
+    stato.readOnly = false;
+    stato.value = "";
+    stato.placeholder = "Scrivi qui lo Stato scelto";
+    ["capitale","continente","lingua","moneta"].forEach(id => {
+      const el = document.getElementById(id);
+      if(el) el.value = "";
+    });
+    aggiornaAvanzamento();
+    return;
+  }
+
+  if(select.value === ""){
+    stato.readOnly = true;
+    stato.value = "";
+    aggiornaAvanzamento();
+    return;
+  }
+
+  const r = STATI[Number(select.value)];
+  if(!r) return;
+  stato.readOnly = true;
+  stato.value = r[0];
+  document.getElementById("capitale").value = r[1];
+  document.getElementById("continente").value = r[2];
+  document.getElementById("lingua").value = r[3];
+  document.getElementById("moneta").value = r[4];
+  aggiornaAvanzamento();
+}
+
+function nav(attiva) {
+  const items = [
+    ["index.html", "Home"],
+    ["geografia.html", "Geografia"],
+    ["economia.html", "Economia"],
+    ["cultura.html", "Cultura"]
+  ];
+
+  return '<nav class="menu">\n' +
+    items.map(function(item){
+      const href = item[0];
+      const label = item[1];
+      const attivo = href === attiva ? ' attivo' : '';
+      return '    <a class="menu-button' + attivo + '" href="' + href + '">' + label + '</a>';
+    }).join("\n") +
+  '\n</nav>';
+}
+
+function gestioneCssPersonalizzato(){
+  const tema = v("tema");
+  const box = document.getElementById("boxCssPersonalizzato");
+  if(!box) return;
+  box.style.display = tema === "altrocss" ? "block" : "none";
+}
+
+function cssIncorporato(){
+  const tema = v("tema") || "blu";
+
+  if(tema === "altrocss"){
+    const cssCustom = v("cssPersonalizzato");
+    if(cssCustom){
+      return "/* CSS personalizzato scritto dallo studente.\n" +
+             "   Controllare sempre leggibilità, menu, immagini e footer. */\n\n" +
+             cssCustom;
+    }
+  }
+
+  const palette = {
+    blu: ["#1f4e79", "#2f75b5", "#f4f7fb", "#ffffff", "#c9d8ea"],
+    verde: ["#166534", "#22c55e", "#f0fdf4", "#ffffff", "#bbf7d0"],
+    caldo: ["#9a3412", "#ea580c", "#fff7ed", "#ffffff", "#fed7aa"],
+    scuro: ["#111827", "#374151", "#f3f4f6", "#ffffff", "#d1d5db"],
+    mare: ["#075985", "#0ea5e9", "#ecfeff", "#ffffff", "#bae6fd"],
+    deserto: ["#92400e", "#d97706", "#fffbeb", "#ffffff", "#fde68a"],
+    tecnologico: ["#312e81", "#6366f1", "#eef2ff", "#ffffff", "#c7d2fe"]
+  };
+
+  const c = palette[tema] || palette.blu;
+
+  return [
+    "body {",
+    "  margin: 0;",
+    "  font-family: Arial, Helvetica, sans-serif;",
+    "  background-color: " + c[2] + ";",
+    "  color: #222222;",
+    "  line-height: 1.6;",
+    "}",
+    "",
+    "header {",
+    "  background-color: " + c[0] + ";",
+    "  color: white;",
+    "  padding: 25px;",
+    "  text-align: center;",
+    "}",
+    "",
+    ".menu {",
+    "  display: flex;",
+    "  justify-content: center;",
+    "  flex-wrap: wrap;",
+    "  gap: 8px;",
+    "  margin-top: 15px;",
+    "}",
+    "",
+    ".menu-button {",
+    "  color: white;",
+    "  background-color: " + c[1] + ";",
+    "  text-decoration: none;",
+    "  padding: 10px 16px;",
+    "  border-radius: 8px;",
+    "  font-weight: bold;",
+    "  display: inline-block;",
+    "  transition: transform 0.2s, background-color 0.2s;",
+    "}",
+    "",
+    ".menu-button:hover,",
+    ".menu-button.attivo {",
+    "  background-color: #163b5c;",
+    "  transform: scale(1.06);",
+    "}",
+    "",
+    "main {",
+    "  max-width: 900px;",
+    "  margin: 25px auto;",
+    "  padding: 0 15px;",
+    "}",
+    "",
+    ".scheda {",
+    "  background-color: " + c[3] + ";",
+    "  border: 1px solid " + c[4] + ";",
+    "  border-radius: 12px;",
+    "  padding: 20px;",
+    "  box-shadow: 0 4px 12px rgba(0,0,0,0.08);",
+    "}",
+    "",
+    "h2 {",
+    "  color: " + c[0] + ";",
+    "  border-bottom: 2px solid " + c[4] + ";",
+    "  padding-bottom: 6px;",
+    "}",
+    "",
+    "ul { padding-left: 1.4rem; }",
+    "li { margin: 6px 0; }",
+    "",
+    ".immagine {",
+    "  max-width: 280px;",
+    "  width: 100%;",
+    "  height: auto;",
+    "  border: 1px solid " + c[4] + ";",
+    "  border-radius: 10px;",
+    "  padding: 6px;",
+    "  background-color: #ffffff;",
+    "}",
+    "",
+    ".segnaposto-immagine {",
+    "  max-width: 360px;",
+    "  min-height: 120px;",
+    "  border: 2px dashed " + c[1] + ";",
+    "  border-radius: 10px;",
+    "  padding: 12px;",
+    "  background: #ffffff;",
+    "  color: " + c[0] + ";",
+    "  font-weight: bold;",
+    "  display: flex;",
+    "  align-items: center;",
+    "  justify-content: flex-start;",
+    "  gap: 12px;",
+    "  text-align: left;",
+    "  margin: 10px 0;",
+    "}",
+    "",
+    ".immagine-demo {",
+    "  width: 76px;",
+    "  height: 54px;",
+    "  flex: 0 0 auto;",
+    "  border: 1px solid " + c[4] + ";",
+    "  border-radius: 6px;",
+    "  background: #eef2f7;",
+    "}",
+    "",
+    ".testo-immagine {",
+    "  font-size: 0.9rem;",
+    "  line-height: 1.35;",
+    "}",
+    "",
+    "footer {",
+    "  text-align: center;",
+    "  background-color: " + c[4] + ";",
+    "  padding: 15px;",
+    "  margin-top: 30px;",
+    "}",
+    "",
+    "@media (max-width: 600px) {",
+    "  .menu { flex-direction: column; }",
+    "  .menu-button { display: block; }",
+    "}"
+  ].join("\n");
+}
+
+function imgTag(src, alt){
+  const nomeFile = esc(src);
+  const testoAlt = esc(alt);
+  const svg = '<svg xmlns="http://www.w3.org/2000/svg" width="120" height="80">' +
+    '<rect width="100%" height="100%" fill="#e5edf7"/>' +
+    '<rect x="8" y="8" width="104" height="64" fill="#ffffff" stroke="#9ca3af" stroke-width="2"/>' +
+    '<circle cx="42" cy="34" r="10" fill="#93c5fd"/>' +
+    '<path d="M20 66 L52 46 L72 58 L92 38 L110 66 Z" fill="#86efac"/>' +
+    '<text x="60" y="75" text-anchor="middle" font-size="9" fill="#374151">immagine</text>' +
+    '</svg>';
+
+  return '<div class="blocco-immagine" role="img" aria-label="' + testoAlt + '">' +
+    '<img src="data:image/svg+xml;utf8,' + encodeURIComponent(svg) + '" class="immagine-demo" alt="Mini immagine dimostrativa">' +
+    '<div class="testo-immagine">' +
+      'Immagine prevista:<br>' +
+      '<code>immagini/' + nomeFile + '</code><br>' +
+      'Inserisci il file nella cartella <strong>immagini</strong> del progetto.' +
+    '</div>' +
+  '</div>';
+}
+
+function parags(text){
+  return String(text || "")
+    .split(/\n+/)
+    .filter(function(x){
+      return x.trim();
+    })
+    .map(function(x){
+      return "    <p>" + esc(x.trim()) + "</p>";
+    })
+    .join("\n");
+}
+
+function page(titolo, attiva, contenuto){
+  return [
+    '<!DOCTYPE html>',
+    '<html lang="it">',
+    '<head>',
+    '  <!-- SEZIONE HEAD: informazioni tecniche, titolo e CSS della pagina -->',
+    '  <meta charset="UTF-8">',
+    '  <meta name="viewport" content="width=device-width, initial-scale=1.0">',
+    '  <title>' + esc(titolo) + '<\/title>',
+    '',
+    '  <style>',
+    cssIncorporato(),
+    '  <\/style>',
+    '<\/head>',
+    '<body>',
+    '  <!-- SEZIONE HEADER: titolo della pagina e menu di navigazione -->',
+    '  <header>',
+    '    <h1>' + esc(titolo) + '<\/h1>',
+    nav(attiva),
+    '  <\/header>',
+    '',
+    '  <!-- SEZIONE CONTENUTO: informazioni principali della pagina -->',
+    '  <main>',
+    contenuto,
+    '  <\/main>',
+    '',
+    '  <!-- SEZIONE FOOTER: copyright e informazioni finali -->',
+    '  <footer>',
+    '    <p>Mini-sito realizzato con HTML e CSS.<\/p>',
+    '    <p>&copy; ' + esc(studenteValido() ? v("studente") : "Nome Cognome") + ' - Progetto didattico HTML e CSS<\/p>',
+    '  <\/footer>',
+    '<\/body>',
+    '<\/html>'
+  ].join('\n');
+}
+
+function contenutoPagina(nomePagina){
+  const stato = v("stato") || "Stato scelto";
+  const capitale = v("capitale");
+  const continente = v("continente");
+  const lingua = v("lingua");
+  const moneta = v("moneta");
+  const bandiera = v("bandiera") || "bandiera.png";
+  const mappa = v("mappa") || "mappa.png";
+  const culturaImg = v("culturaImg") || "cultura.png";
+
+  if(nomePagina === "geografia.html"){
+    return {
+      titolo: "Geografia - " + stato,
+      contenuto: `    <section class="scheda">
+      <h2>Posizione e territorio</h2>
+${parags(v("geo"))}
+      <h2>Mappa</h2>
+      ${imgTag(mappa, "Mappa di " + stato)}
+      <h2>Elementi geografici da controllare</h2>
+      <ul>
+        <li>Posizione geografica</li>
+        <li>Continente</li>
+        <li>Confini o mari vicini</li>
+        <li>Clima</li>
+        <li>Caratteristiche del territorio</li>
+      </ul>
+    </section>`
+    };
+  }
+
+  if(nomePagina === "economia.html"){
+    return {
+      titolo: "Economia - " + stato,
+      contenuto: `    <section class="scheda">
+      <h2>Economia</h2>
+${parags(v("eco"))}
+      <h2>Aspetti economici principali</h2>
+      <ul>
+        <li><strong>Moneta:</strong> ${esc(moneta)}</li>
+        <li>Attività economiche principali</li>
+        <li>Risorse disponibili</li>
+        <li>Dati interessanti da spiegare</li>
+      </ul>
+    </section>`
+    };
+  }
+
+  if(nomePagina === "cultura.html"){
+    return {
+      titolo: "Cultura - " + stato,
+      contenuto: `    <section class="scheda">
+      <h2>Cultura e tradizioni</h2>
+${parags(v("cult"))}
+      <h2>Immagine culturale</h2>
+      ${imgTag(culturaImg, "Immagine culturale di " + stato)}
+    </section>`
+    };
+  }
+
+  return {
+    titolo: stato,
+    contenuto: `    <section class="scheda">
+      <h2>Introduzione</h2>
+${parags(v("intro"))}
+      <h2>Bandiera</h2>
+      ${imgTag(bandiera, "Bandiera di " + stato)}
+      <h2>Informazioni rapide</h2>
+      <ul>
+        <li><strong>Capitale:</strong> ${esc(capitale)}</li>
+        <li><strong>Continente:</strong> ${esc(continente)}</li>
+        <li><strong>Lingua ufficiale:</strong> ${esc(lingua)}</li>
+        <li><strong>Moneta:</strong> ${esc(moneta)}</li>
+      </ul>
+    </section>`
+  };
+}
+
+function generaPagina(nomePagina){
+  const dati = contenutoPagina(nomePagina);
+  files[nomePagina] = page(dati.titolo, nomePagina, dati.contenuto);
+  pagineGenerate[nomePagina] = true;
+  aggiornaStatoGlobaleCodice();
+}
+
+function genera(scrolla=true){
+  const statoLower = v("stato").toLowerCase();
+
+  if(!studenteValido()){
+    const esito = document.getElementById("esito");
+    if(esito){
+      esito.innerHTML = '<div class="error">❌ Scrivi il tuo Nome e Cognome reali, separati da uno spazio. Non puoi lasciare “Mario Rossi” o “Nome Cognome”.</div>';
+    }
+    evidenziaCampo("studente");
+    aggiornaAvanzamento();
+    return;
+  }
+
+  if(statoLower === "giappone"){
+    marcaCodiceDaRigenerare();
+    const esito = document.getElementById("esito");
+    if(esito){
+      esito.innerHTML = '<div class="error">❌ Non è consentito scegliere il Giappone: è già usato come esempio guidato nel simulatore. Scegli un altro Stato e svolgi la tua ricerca.</div>';
+    }
+    return;
+  }
+
+  const pagina = current || "index.html";
+  const campoPagina = campoTestoPerPagina(pagina);
+
+  // La generazione è controllata pagina per pagina: si valida solo la pagina selezionata.
+  // Esempio: se lo studente sta lavorando su Geografia, non viene obbligato a completare Economia o Cultura.
+  if(campoPagina && testoAncoraPredefinito(campoPagina)){
+    paginaRichiestaModal = pagina;
+    svuotaAnteprimaSicura();
+    apriModaleAnteprima(pagina);
+    evidenziaCampo(campoPagina);
+    return;
+  }
+
+  generaPagina(pagina);
+  mostra(pagina);
+
+  const esito = document.getElementById("esito");
+  if(esito){
+    esito.innerHTML = '<div class="success">Codice generato per la pagina ' + esc(nomePaginaDidattico(pagina)) + '. Per le altre pagine seleziona il relativo pulsante, completa i campi richiesti e genera il codice.</div>';
+  }
+
+  aggiornaAvanzamento();
+
+  if(scrolla){
+    const sezioneCodice = document.getElementById("sezione-codice");
+    if(sezioneCodice) sezioneCodice.scrollIntoView({behavior:"smooth", block:"start"});
+  }
+}
+
+function evidenziaTabCorrente(){
+  document.querySelectorAll(".tabs button").forEach(b => b.classList.remove("active"));
+  const tab = document.getElementById("tab-" + current);
+  if(tab) tab.classList.add("active");
+}
+
+function mostra(nome){
+  current = nome || "index.html";
+  evidenziaTabCorrente();
+  aggiornaTitoloAnteprima(current);
+
+  const codice = document.getElementById("codice");
+  if(codice){
+    codice.textContent = isPaginaDisponibile(current) ? files[current] : "";
+  }
+
+  aggiornaAnteprima(current);
+}
+
+function preparaHtmlPerShadow(html){
+  const testo = String(html || "");
+
+  const stili = [];
+  testo.replace(/<style[^>]*>([\s\S]*?)<\/style>/gi, function(match, css){
+    stili.push(css);
+    return match;
+  });
+
+  let css = stili.join("\n");
+  css = css.replace(/(^|})\s*body\s*\{/g, "$1 .preview-body {");
+
+  // Uso locale file://: neutralizza qualunque url(...) nel CSS dell'anteprima.
+  // Questo evita tentativi di caricamento di immagini o risorse locali.
+  css = css.replace(/url\s*\(\s*["']?([^"')]+)["']?\s*\)/gi, "url('')");
+
+  const bodyMatch = testo.match(/<body[^>]*>([\s\S]*?)<\/body>/i);
+  let contenutoBody = bodyMatch ? bodyMatch[1] : testo;
+
+  // Nell'anteprima i link non devono rimanere link reali: diventano pulsanti didattici.
+  contenutoBody = contenutoBody.replace(
+    /<a\b([^>]*?)href=["']([^"']*)["']([^>]*)>([\s\S]*?)<\/a>/gi,
+    function(match, prima, href, dopo, testoLink){
+      return '<button type="button" class="menu-button" data-file="' + esc(href || "") + '">' + testoLink + '<\/button>';
+    }
+  );
+
+  // Nell'anteprima nessuna immagine deve provare a caricare file locali.
+  // Al suo posto compare una mini immagine incorporata + testo guida.
+  const svgDemo = encodeURIComponent(
+    '<svg xmlns="http://www.w3.org/2000/svg" width="120" height="80" viewBox="0 0 120 80">' +
+    '<rect width="120" height="80" rx="8" fill="#e5edf7"/>' +
+    '<rect x="14" y="16" width="92" height="48" rx="5" fill="#ffffff" stroke="#94a3b8"/>' +
+    '<circle cx="38" cy="32" r="7" fill="#93c5fd"/>' +
+    '<path d="M25 58 L51 40 L68 53 L83 39 L101 58 Z" fill="#bfdbfe" stroke="#60a5fa"/>' +
+    '<text x="60" y="74" text-anchor="middle" font-family="Arial" font-size="9" fill="#334155">IMMAGINE</text>' +
+    '<\/svg>'
+  );
+  const imgDemo = 'data:image/svg+xml;charset=UTF-8,' + svgDemo;
+
+  contenutoBody = contenutoBody.replace(
+    /<img\b([^>]*?)src=["']([^"']*)["']([^>]*?)>/gi,
+    function(match, before, srcUrl, after){
+      const sorgente = String(srcUrl || "");
+
+      // Le mini immagini dimostrative inserite da imgTag() sono già sicure.
+      // Non vanno trasformate di nuovo, altrimenti compare a video il data URL.
+      if(sorgente.toLowerCase().startsWith("data:image/")){
+        return match;
+      }
+
+      const percorso = sorgente || "Nessun file indicato";
+      return '<div class="segnaposto-immagine">' +
+        '<img class="immagine-demo" src="' + imgDemo + '" alt="Immagine dimostrativa">' +
+        '<div class="testo-immagine">Immagine prevista:<br><code>' +
+        esc(percorso) +
+        '<\/code><br>Inserisci il file nella cartella immagini del progetto.<\/div>' +
+        '<\/div>';
+    }
+  );
+
+  return [
+    '<style>',
+    ':host{all:initial;display:block;font-family:Arial, Helvetica, sans-serif;}',
+    '.preview-body{min-height:100%;box-sizing:border-box;}',
+    css,
+    '<\/style>',
+    '<div class="preview-body">',
+    contenutoBody,
+    '<\/div>'
+  ].join("\n");
+}
+
+function impostaAnteprimaIsolata(html){
+  const contenitore = document.getElementById("anteprima");
+  if(!contenitore) return;
+
+  if(!anteprimaShadowRoot){
+    anteprimaShadowRoot = contenitore.attachShadow({mode:"open"});
+  }
+
+  anteprimaShadowRoot.innerHTML = preparaHtmlPerShadow(html);
+
+  anteprimaShadowRoot.querySelectorAll("button[data-file]").forEach(function(btn){
+    btn.addEventListener("click", function(){
+      const file = this.getAttribute("data-file");
+      if(isPaginaDisponibile(file)){
+        mostra(file);
+      } else {
+        current = file;
+        evidenziaTabCorrente();
+        svuotaAnteprimaSicura();
+        apriModaleAnteprima(file);
+      }
+    });
+  });
+}
+
+function svuotaAnteprimaSicura(){
+  aggiornaTitoloAnteprima(current || "index.html");
+
+  const htmlVuoto = [
+    '<style>',
+    ':host{all:initial;display:block;font-family:Arial, Helvetica, sans-serif;}',
+    '.preview-body{margin:0;background:#ffffff;color:#4b5563;padding:20px;box-sizing:border-box;}',
+    '<\/style>',
+    '<div class="preview-body"><p>Anteprima non ancora disponibile.<\/p><\/div>'
+  ].join("\n");
+
+  const contenitore = document.getElementById("anteprima");
+  if(!contenitore) return;
+  if(!anteprimaShadowRoot){
+    anteprimaShadowRoot = contenitore.attachShadow({mode:"open"});
+  }
+  anteprimaShadowRoot.innerHTML = htmlVuoto;
+}
+
+function aggiornaAnteprima(nomePagina){
+  const pagina = nomePagina || current || "index.html";
+  aggiornaTitoloAnteprima(pagina);
+
+  if(!isPaginaDisponibile(pagina)){
+    svuotaAnteprimaSicura();
+    apriModaleAnteprima(pagina);
+    return;
+  }
+
+  impostaAnteprimaIsolata(files[pagina]);
+}
+
+function copia(){
+  const testo = isPaginaDisponibile(current) ? files[current] : "";
+  if(!testo){
+    apriModaleAnteprima(current);
+    return;
+  }
+  navigator.clipboard.writeText(testo).then(() => {
+    const msg = document.getElementById("messaggio-copia");
+    if(msg){
+      msg.textContent = "Codice copiato.";
+      msg.style.display = "block";
+      setTimeout(() => { msg.style.display = "none"; }, 2000);
+    }
+  });
+}
+
+function scaricaBlob(nome){
+  const blob = new Blob([files[nome] || ""], {type:"text/html;charset=utf-8"});
+  const a = document.createElement("a");
+  a.href = URL.createObjectURL(blob);
+  a.download = nome;
+  document.body.appendChild(a);
+  a.click();
+  a.remove();
+  URL.revokeObjectURL(a.href);
+}
+
+function scarica(){
+  if(!isPaginaDisponibile(current)){
+    genera(false);
+  }
+  if(isPaginaDisponibile(current)){
+    scaricaBlob(current);
+  }
+}
+
+function generaTuttePaginePerDownload(){
+  PAGINE_BASE.forEach(file => generaPagina(file));
+}
+
+function scaricaTutti(){
+  generaTuttePaginePerDownload();
+  mostra(current);
+  PAGINE_BASE.forEach((nome, i) => {
+    setTimeout(() => scaricaBlob(nome), i * 350);
+  });
+}
+
+function contaParagrafi(t){
+  return String(t || "").split(/\n+/).filter(x => x.trim().length > 20).length;
+}
+
+function impostaStato(id, tipo, icona, testo){
+  const card = document.getElementById(id);
+  if(!card) return;
+  card.classList.remove("status-ok", "status-warning", "status-error", "status-neutral");
+  card.classList.add("status-" + tipo);
+  const icon = card.querySelector(".status-icon");
+  const p = card.querySelector("p");
+  if(icon) icon.textContent = icona;
+  if(p) p.textContent = testo;
+}
+
+function aggiornaAvanzamento(mostraDettagli=false){
+  let punti = 0;
+  const totale = 6;
+  const stato = v("stato");
+  const studente = v("studente");
+
+  const introOk = testoValido("intro", 3);
+  const geoOk = testoValido("geo", 2);
+  const ecoOk = testoValido("eco", 2);
+  const cultOk = testoValido("cult", 2);
+  const contenutiOk = introOk && geoOk && ecoOk && cultOk;
+
+  const strutturaOk = stato && stato.toLowerCase() !== "giappone";
+  const cssOk = !!v("tema");
+  const imgOk = v("bandiera") && v("mappa") && v("culturaImg");
+  const copyrightOk = studenteValido();
+
+  const pagineGenerateOk = PAGINE_BASE.every(file => isPaginaDisponibile(file));
+  const consegnaOk = strutturaOk && contenutiOk && cssOk && copyrightOk && pagineGenerateOk;
+  if(strutturaOk){ punti++; impostaStato("statoStruttura", "ok", "✅", "Struttura pronta: Stato valido e menu comune disponibile nel codice generato."); }
+  else { impostaStato("statoStruttura", "error", "❌", "Scegli uno Stato valido. Il Giappone non è ammesso perché è l'esempio guidato."); }
+
+  if(contenutiOk){
+  punti++;
+  impostaStato(
+    "statoContenuti",
+    "ok",
+    "✅",
+    "Contenuti completati: tutte le sezioni (Home, Geografia, Economia e Cultura) sono state compilate con testi personali."
+  );
+}
+else {
+  impostaStato(
+    "statoContenuti",
+    "warning",
+    "⚠️",
+    "Contenuti da completare: una o più sezioni contengono ancora il testo guida oppure testi troppo brevi."
+  );
+}
+  if(cssOk){
+    punti++;
+    if(v("tema") === "altrocss") impostaStato("statoCss", "ok", "✅", "CSS personalizzato attivo: controlla leggibilità, menu e immagini.");
+    else impostaStato("statoCss", "ok", "✅", "CSS predefinito selezionato e incorporato nelle pagine.");
+  } else {
+    impostaStato("statoCss", "warning", "⚠️", "Scegli uno stile CSS dal menu a tendina.");
+  }
+
+  if(imgOk){ punti++; impostaStato("statoImmagini", "ok", "✅", "Nomi immagine inseriti. Ricorda di salvare i file nella cartella immagini."); }
+  else { impostaStato("statoImmagini", "warning", "⚠️", "Completa i nomi dei file immagine: bandiera, mappa e cultura."); }
+
+  if(copyrightOk){ punti++; impostaStato("statoCopyright", "ok", "✅", "Copyright personale presente nel footer."); }
+  else { impostaStato("statoCopyright", "error", "❌", "Inserisci Nome e Cognome: il copyright nel footer è obbligatorio."); }
+
+  if(consegnaOk){
+  punti++;
+  impostaStato(
+    "statoConsegna",
+    "ok",
+    "✅",
+    "Tutte le pagine sono state generate e il lavoro è pronto per la consegna."
+  );
+}
+else {
+  impostaStato(
+    "statoConsegna",
+    "warning",
+    "⏳",
+    "Non ancora pronto per la consegna: completa i contenuti e genera tutte le pagine."
+  );
+}
+  const percentuale = Math.round((punti / totale) * 100);
+  const bar = document.getElementById("progressBar");
+  const score = document.getElementById("progressScore");
+  if(bar) bar.style.width = percentuale + "%";
+  if(score) score.textContent = "Avanzamento: " + percentuale + "%";
+  aggiornaCopyright();
+  stimaValutazione();
+  return percentuale;
+}
+
+function stimaValutazione(){
+  const selectStato = document.getElementById("csvPreset");
+  const tema = v("tema");
+  const statoAltro = selectStato && selectStato.value === "altro";
+  const cssAltro = tema === "altrocss";
+  const introOk = contaParagrafi(v("intro")) >= 3;
+  const geoOk = contaParagrafi(v("geo")) >= 2;
+  const ecoOk = contaParagrafi(v("eco")) >= 2;
+  const cultOk = contaParagrafi(v("cult")) >= 2;
+  const contenutiOk = introOk && geoOk && ecoOk && cultOk;
+  let votoBase = 6;
+  const dettagli = ["Base: sito guidato con struttura minima funzionante → sufficienza."];
+
+  if(contenutiOk){ votoBase += 1; dettagli.push("+1: contenuti sufficientemente sviluppati nelle quattro sezioni."); }
+  else { dettagli.push("Per superare chiaramente la sufficienza, sviluppa meglio i testi delle sezioni."); }
+
+  const testiDefault = (
+    v("intro").includes("Scrivi qui l'introduzione") ||
+    v("geo").includes("Scrivi qui due paragrafi") ||
+    v("eco").includes("Scrivi qui due paragrafi") ||
+    v("cult").includes("Scrivi qui due paragrafi")
+  );
+
+  if(!testiDefault && contenutiOk){ votoBase += 1; dettagli.push("+1: testi personalizzati rispetto alla traccia di partenza."); }
+  else { dettagli.push("Personalizza i testi: non lasciare solo il contenuto guida del simulatore."); }
+  if(statoAltro){
+  votoBase += 1;
+  dettagli.push("+1 bonus: Stato scelto tramite Altro.");
+}
+
+if(cssAltro){
+  votoBase += 1;
+  dettagli.push("+1 bonus: CSS personalizzato scelto tramite Altro CSS.");
+}
+  if(votoBase > 10) votoBase = 10;
+
+  const stima = document.getElementById("stimaValutazione");
+  const elenco = document.getElementById("dettaglioValutazione");
+  if(stima) stima.textContent = "Stima orientativa: " + votoBase + "/10";
+  if(elenco) elenco.innerHTML = dettagli.map(d => "<li>" + esc(d) + "</li>").join("");
+  return votoBase;
+}
+
+function controlla(){
+  const percentuale = aggiornaAvanzamento(true);
+  const problemi = [];
+  if(v("stato").toLowerCase() === "giappone") problemi.push("Non è consentito scegliere il Giappone: è l'esempio guidato.");
+  if(!v("stato")) problemi.push("Manca il nome dello Stato.");
+  if(!studenteValido()) problemi.push("Manca Nome e Cognome reale dello studente: scrivi almeno due parole separate da uno spazio e non lasciare Mario Rossi o Nome Cognome.");
+  if(contaParagrafi(v("intro")) < 3) problemi.push("La Home dovrebbe avere un'introduzione più lunga: almeno 5 righe reali.");
+  if(contaParagrafi(v("geo")) < 2) problemi.push("Geografia richiede almeno 2 paragrafi.");
+  if(contaParagrafi(v("eco")) < 2) problemi.push("Economia richiede almeno 2 paragrafi.");
+  if(contaParagrafi(v("cult")) < 2) problemi.push("Cultura richiede almeno 2 paragrafi e una curiosità spiegata bene.");
+  const esito = document.getElementById("esito");
+  if(!esito) return;
+  if(problemi.length){
+    esito.innerHTML = '<div class="error"><strong>Da correggere:</strong><ul>' + problemi.map(p => "<li>" + esc(p) + "</li>").join("") + '</ul></div>';
+  } else {
+    esito.innerHTML = '<div class="success">I requisiti minimi principali risultano rispettati. Avanzamento attuale: ' + percentuale + '%. Genera poi una pagina alla volta e controlla codice e anteprima.</div>';
+  }
+}
+
+function resettaSoloCheckbox(){
+  document.querySelectorAll(".checklist-finale input[type='checkbox']").forEach(function(cb){
+    cb.checked = false;
+  });
+
+  const esito = document.getElementById("esito");
+  if(esito){
+    esito.innerHTML = '<div class="success">Le spunte della checklist sono state rimosse. I contenuti inseriti, il codice e l\'anteprima non sono stati modificati.</div>';
+  }
+}
+
+function resettaTuttiICampi(){
+  if(!confirm("Vuoi davvero reimpostare tutti i campi?")) return;
+  const valori = {
+    csvPreset:"", tema:"blu", stato:"", studente:"", capitale:"", continente:"", lingua:"", moneta:"",
+    bandiera:"bandiera.png", mappa:"mappa.png", culturaImg:"cultura.png",
+    intro:`Scrivi qui l'introduzione dello Stato scelto.
+Presenta lo Stato con parole semplici.
+Indica dove si trova e perché è interessante.
+Aggiungi qualche informazione generale.
+Completa il testo con frasi chiare e ordinate.`,
+    geo:`Scrivi qui due paragrafi sulla geografia dello Stato scelto.
+Indica continente, posizione, confini, clima e caratteristiche del territorio.`,
+    eco:`Scrivi qui due paragrafi sull'economia dello Stato scelto.
+Indica moneta, attività economiche principali, risorse e dati interessanti.`,
+    cult:`Scrivi qui due paragrafi sulla cultura dello Stato scelto.
+Indica lingua, tradizioni, cucina e almeno una curiosità spiegata bene.`,
+    cssPersonalizzato:`body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f4f7fb;
+  color: #222222;
+}
+
+header {
+  background-color: #1f4e79;
+  color: white;
+  padding: 25px;
+  text-align: center;
+}
+
+.menu {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.menu-button {
+  background-color: #2f75b5;
+  color: white;
+  text-decoration: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+}
+
+.menu-button:hover {
+  background-color: #163b5c;
+}
+
+main {
+  max-width: 900px;
+  margin: 25px auto;
+  padding: 0 15px;
+}
+
+.scheda {
+  background-color: white;
+  border: 1px solid #c9d8ea;
+  border-radius: 12px;
+  padding: 20px;
+}
+
+.immagine {
+  max-width: 280px;
+  width: 100%;
+  height: auto;
+}`
+  };
+  Object.entries(valori).forEach(([id, value]) => {
+    const el = document.getElementById(id);
+    if(el) el.value = value;
+  });
+  const stato = document.getElementById("stato");
+  if(stato){ stato.readOnly = true; stato.placeholder = ""; }
+  document.querySelectorAll(".checklist-finale input[type='checkbox']").forEach(cb => cb.checked = false);
+  Object.keys(files).forEach(nome => delete files[nome]);
+  Object.keys(pagineGenerate).forEach(nome => delete pagineGenerate[nome]);
+  codiceGenerato = false;
+  current = "index.html";
+  const codice = document.getElementById("codice");
+  if(codice) codice.textContent = "";
+  svuotaAnteprimaSicura();
+  const esito = document.getElementById("esito");
+  if(esito) esito.innerHTML = '<div class="success">Tutti i campi sono stati reimpostati.</div>';
+  gestioneCssPersonalizzato();
+  evidenziaTabCorrente();
+  aggiornaAvanzamento();
+  stimaValutazione();
+}
+
+document.addEventListener("keydown", e => {
+  if(e.key === "Escape") chiudiModaleAnteprima();
+});
+
+document.addEventListener("click", e => {
+  const modal = document.getElementById("modalAnteprima");
+  if(e.target === modal) chiudiModaleAnteprima();
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  aggiornaTitoloAnteprima(current);
+  svuotaAnteprimaSicura();
+
+  inizializzaMenuStati();
+
+  gestioneCssPersonalizzato();
+  PAGINE_BASE.forEach(file => { pagineGenerate[file] = false; });
+
+  document.querySelectorAll("#sezione-dati input, #sezione-dati textarea, #sezione-dati select").forEach(el => {
+    el.addEventListener("input", marcaCodiceDaRigenerare);
+    el.addEventListener("change", marcaCodiceDaRigenerare);
+  });
+
+  const campoStudente = document.getElementById("studente");
+  if(campoStudente){
+    campoStudente.addEventListener("input", aggiornaCopyright);
+    campoStudente.addEventListener("change", aggiornaCopyright);
+  }
+
+  evidenziaTabCorrente();
+  aggiornaAvanzamento();
+  stimaValutazione();
+});
+</script>
+
+<footer style="text-align:center;background:#e5edf7;padding:16px;margin-top:25px">
+  <p>&copy; Domenico Capano - LearningObjects.org</p>
+
+  <img src="data:image/webp;base64,UklGRu4QAABXRUJQVlA4WAoAAAAQAAAA/wAA/wAAQUxQSIYEAAAFoKhaextJ+ksYIYwxhWlSURRFYSb6/Z9kcs45mMIUxhTq2Vj+pf//VO7eEBEOJElqm0HjoGSwEvEDFD5ckspwj0SGWOsqFcUyxUKYo1sAn7Srf456tX+a9F5S2r2kq3wv6b/5pMvrQFUzCdTNFaDKmQBqB4DqOfrVz7EvALSLgONeCOgWA6oFwREvChQLA73iQK1AmPjS//77v//C01ibWZsZYwwZT957P+yH/TD4FJq7PLfjI9X3u12fMrOiLAw/cr7bbn2SNFWZh4vjrm19anTV3ISNp2+/DSmxOM1jRLb7skuFdlHEivD205ACs9MqZqS/ffHwLZZZ3Gjv33XgXVTxk/3tUxQaFNqVk5Dw/s0A23xtZCTdv9qBtlyJSbx/00G2WkhK/7sWtLImxEuFhVcd2r1tSBr+RY/1V2tD4sL+2R6oVDsSGHYvdPmsj8r5SZDzqOuH3ntvjHHWFUFy51++BBAFxTrAnLY9mC43r0yI/4ItCsyNjP3py4+RT+rTjMvwzDOFwflJtMK0OT3hz+IJA3uDX5KOWEr3T/YccbAqmdfOC+bjM9tYXrR+fGAoEKE5rv4VO/eQrZmP7CfDaIGwLmJnnrI6Y9G+GysQ7I34mWe34T2AH+3HKRORe/nwQ0CJ9cuXUSLB3DLMnHOgsMlZV+6jMUJhvmTeNEVcu2+2h8XCumDeM4OF5ZzVGPPmoFgwd5i3zHBkt1j37geHBEO54r7LeHvV/b1oWM45vNhJybz9+PC3wuEOZ+vhiZiKm/2jvxMOrubVmoTl9JR3//qreKgWchLiat5O/yIgFhUvvxQ43MpYLbF/FhG1Y20t6A7evfqTkGh4RQ5Bl7B/8IeQcLWkdLiat+JvYqJccXjgJZ3DLzYEimrBXFPQikQ6EFbn0L2KUX8FmOWcVWEao8eSBp7cEMYmZ+U6w3N6qoB7Vho3LGtfMfptKJA08WYbo+OGAvmIelS86mI03spXIHcMq9IhRs8V8UqkIWFIVyiikuFq4UJEugi/iBfgKvLFtyMFwst3KZDQ5bsVSBZcuUuqh8BW7hbqQbDVu8j0MMjq3W5YkUqnXLHSHJ5GpGOAVu8u0VFAa3cR6DigtbvJcyTQ2l3FORZk7e7iHA2yfhfSjISwknf/LPTAJWEyANbvSpiKmC/l9LuTJQtc/S5lyQNVv9tGlkzU9btWKRd1/e41ykbfuAt98lE47kabAdA47kqXIVA57k6TQdA57lKPYVA67laLgVA77lqDEk6RsLxrg4+7V1DTqo/QTab7tj14Xrv5CWFnxKwAM7q+H7z3xhjrXJERgUdAtUlisLVJPJRvUg+Vq9RD1SK1jJqSy5iFqYfytUk8ZFcu8RAtqtRDxTJLPJSdVomHyC6KxENUnOaJh8hVc5N2iExV5mkjSMiKsjCU+pC7PLfJX2Rsnfqp+d9/r8GcYfmceBpKPA0lnobUMhlMPA0lnoY0Mw1MPA3pZgqonAmgdgConqNf/VzxCYAjXwRc5wmB/+ZzRlf5zijtzmjSOyPt6p+TdGfTvUvV7JgaR0BWUDggQgwAAHBAAJ0BKgABAAE+bTCWSKQioiEmEFn4gA2JTdwtMcdtbD9zT3+j7ZjRnb/zQ/u3QMbu/Of1p7BvDSS91SaD/8L6i/MC/Sz9k/Vg9QHmC/Wv1h/83+2PvH/xn+D9gD/I/5DrJ/QA/bz0zv3b+E/+6f9L9y/aO///sAf//1AOon7Af5Xta/VL1J6fe8Jg3nvKQv3XvPxPryH2X8L5h6RHIB6yn+n5BqLv1gejd+oBLuOX//sFT7LuQl2kuKrdeXTNEYMeEY+Tk7qr2gDsRyYh8Ix8nJ3VXtAHWPlXfB1BAE6kKPPbJb9kYOoIBWKDQnTMN2hBA20Y+Tl8my2Se+sTInrjl9WDcyBHq2KT00Yi9+fF52YVUGzd4XIt3BnPK0gOdNxQ4VQ/mSSqS/xeXWpd4CyvkWqrmugVPrfdjCsegBFY1ftqG/rWAj8lGasU6zkKnZS5G3QKS+WYa/Ryl9sUJL9AjmkNvPYbh4cvxbIeMF15DjgQ/MYqvddRS+BNrKMMCEf4sI9G5EVjWx7jZwQ/A6apfk3AG2Fh2uuTe08k+v9NA0H8lrRihkzJg6q54QY/w61C7vzIhhSq0OOXccUyD44ElaFnviUu32JALS4zkBKh5T3Qy2BqdNPd85p1APJ0+Ix8oEYPqUrNlGSlnKOtl4jCfV2YOkNbJHygM6mHBWJ0OYNWPC/GTuW9sqhAAP7yukH2PKi/ltmzJ9Dy2J0AN29oRLD9VLkVMWKvGppDWEhmY6bTtqdoQ01NWmNNlulHR5IdOUaAxrjBFAHcrAKJT+o71Lk+JgrID4Wefom+t2iotJgeL9cWt/44XoAeirsqpcCt4bubQkF2ZyYHaw69gS7s/y0P//r3//rsn/+28E5FftkWy2n8j9bGsS/fGez7578KqYnpbyF//UiINCT8cUYgAhtw+nwZNg2sfSBF4Gh6i0JEVSkfudrut3h425UTRi5JHGG/7kDVSmmygAA6P70YhymHNGQq7OxXpF1/X3I3wwoZSFC/lvn7TxQGn35oQxb9eyTwgPJxW6KTI+vh+t22AB6y1Daif0nv3KG5L8YWQDEwlIAApA4Bc4Dh/ewk8HodWDVkSoiuAg5nz08V/AbLmF0LzoxckjjDf9yBqpUXfdgAABeB4v2BQk8HodWDVkSoiuAg5nz08V/AbLmF0LzoxckjjDf9yBqpUXfdgAAYdc/uuv4+bBYF4hN/r3cjq/nBHZLz+fT8b1Kn7ClaXl54sIp+t6+0/uweM4iEgK/O4EXIV2gBzp1DLtB1MOGPOv2Sp81yXM8JBh4XOLIoJNqAJ2a6OSyf8EyGqAiwf06oPLC1K4u/GXPiivUQd91GT35rAeo3bVdxKGB/KnPIeus3c483ku/Feh7+YTJwZsM+0jWNoi4Zfxsy6dl18NsraPAfkQ/pFLf5ENGRsmPFkmI8iUDC/tAGGUH5mwp+O/vOGJOrfVzTyEv6rlHFTBO6/krOvRwlyZmtwQq9sMTQZ2XgiVXWpsPk3hkI64S7usjvPVFBNxf4bw/IQlbsZWYjeJXadFQDfelkh5j7CGyYoaJFSDV7JBZgqP5wnCuIGAoooggIE7WQdPr9i51LvM1Xcv277EUC10i71/0xUGgo1Gr+pWwjXXp1SGhiVsPCbM8ceifrpNeCzY9Nws7pSPO3iBM/LaAgnyM1zTCsWwPRG2N1cPFrCek4oz4BGPpz4XmCxdoiPetk3IvQMRCfKqy00HShia3oZavjz+85al1055o5bgf9DfVWW2E1I089iswIgOoBwjSfUdoRq+Pn7gLQ2t2J+5s0vnfENr5R8CzxgT6YV+3dL0+Btb6N20NU4ivGKNW/ergBZmgY/MhHnydRWebdPirWNWNCc5zNWq54x8J8+6p7QdZ42sXPSVQE6Jq3qm0ApOAFBGnmTBq5Hu/q4yz2F1Qi6MovnFaY6TCbl5Wso82Jvtj0vR76JYL+Rg0DavrOEZPsTH3g1ucHCp6E5McPwbMN/6YZocqR0ax/zNwapo6QpEF3HHBJB5DFyM1OVHiXtuHirWL8K2PrmA1WJVSLmJAoqs7c03aS7uaYolE3XoZ/7Red7jLaAQTPKCdvlhJfj0KC/oqyCfLkSfowUQ/qllknqprvXWItNZuVoD4teV5iz1PYY3+CDvpDAshVzSDEOpSPp+sXksVt+1uvf3lPtb1fPUqMFAO2Jrz2CN38XEB76dH2ZPp6qQgMeFEFipL483JmVhi5A99R4Oy3/mei8zUJV+q5QUIFuIlDtl0c+08Mftc1W9ZJ1KL/xi3C/wiIW+nDFDMAMEFklArNTqUlJkfXw/W7bVK0Ik26+hKC0FoKJUn1BkcRmpPzOnGwryWeuBAGPvdgnl9dfTt+XNUcvYsBDnKDc7Izjd9k/AWXg8D21pJcylRqDk/6WqHqJnAGHiftK2j2tzJ9icUjsbmXetBn7aG1f1m1wcTSGlAMS4C3Uy0h2IHQEnEenQ4JiuaIBmXdLK5+epv5+QAHmXttzsWvCp6DguRktVs/RN9btFRZ6RFj2YgM6MXJI4w3/cgaqUrEzV8+lH+TnIEReXJ6M/MUF6+ujydAhRIHz7VY3d54SRyM8/vnDaTYOTVqMGAJjUX6AlDm8AxFAduY7jwBh6FppZw/1E4YpQcHavQdWKpKokdUonJ49gWBMKw5xr982lZ1tw+hvmZsnxiwZLx/EOq13vjE7gp+R4ce2QxY6/dZ4hevSELKoyb97XuFcMzBuubKbwLV3Jfb6pGVMoq/tW3tr6slNXxsDcaRfkBO2+iDKkytFe8QhX2k4EXnZprzbYnC01PMVDKzahIKiumxRjaW1JQ0WnmdU3B1EzSeIgjuHcC6e7/m3uJ6oIviWQZ9jwT0CN2ROoNBJ2Mh5OXc7d9oveUcbrbMlKXQSAmpYHL8L4hHhWtPiSmDGS/ffHrwd97EUaNhBAYsYt0EZFfBNi0KQhOycG55aXeBP9MxCRshOQfnn9Q9uPG4fIO7QLkWyxFAYu3m/mMf3HOYzpFz/JGFi9zSewy2wa8OKAIBgCXWMmcacC2aLIIl0Ua97v6PrwEUu5avRF9ZIlqPu+hiTe4g2Mc7vhOzAyH5MEN7HoEKafBwDipF/WbQMI5qJ/9/paJejtdA5WFFIvB5B/n6A9yPNUb118ylC/5q9pzM1B52oA99CtIHCsAc2xiXhYQ2vCascwx8hRYa4RVC8s7/nKYPHWNL2Ivi91HkOCzka5ohzn9W87bJJbtiKFf4Yr3+wTzcKcAqQqq2vOoWSTE4cBkeKq7O3v16GX6Su1eqbP0O345+FUjnS+0TqSTMWT3JqxpqACnc1rnEnKHRnpP+ht7l78nY8LxkbLCC3KB8X7Dov1oQgc/RFvaEPzBJxjPag1J0rikBUGXXfCFucXC12/PWdsVlpL48TIqsNvyF5wo6NGdKSFzpOI1GknvCMvajafFdksamScps4oqkhKAw8wTfhJMTbPw5pWdj+Dw9HFTzIsvbjNvL9PXt+b78VgZE17uKy0kW+wczOISxvrXcSv5vH7t+tbda+MzRe97v7Db+1jJR451/gzMTa3dhzBbaxvaC8Sm8mRu6LdqnFXhlcuupcW1/ByXUSb9ozGkk51Wj/+LzhK6x+azzLi+SvvafAAAAAY+HONWbizWDzwyuVrxY/msH9QurotVSPkBejcwP8PH6wdmiUBDdUfor5vz/xfb0K8LEvOx8iuq6/ZpLl3ujjEVPeaT3zOtVKjND+DKb6Z1hzlNNBdnmSuNf+CiJRDUWdfoXUG8xccLUBXDqjkBS/71WY0kdFF4T5aQ83nP8lTezelx0npxWSXfwFM9EReDwn4JOQXcuMdINjLKYz3XQAC0UYNsb7t342Lt/1lM52SgRQRjzNbbvSEUF1fBaVrFXTxdfGLcaU64bYAANE8pDLDd0J3r+a45s4l1FtgoaSqrL2k/kkDPYpmCDcyDp9fsXOpd5mq7l+3ftgVTx9pR6aqtTffq+C0rWKuni6+MW4QX3ACD/XSlV2as1b5P3jaPgj1nuAqRD/50tJT0fDykKQs2dcDHw5xqzcv0DV5mq7l+3ftgVTx9pR6aqtTffq+C0rWKuni6+MW4QX3ATbBzsXYdcdn0+Z1R9a4waKlvGEtzs2Er0r96/NrOQTYC4lDxTuMp5gPxW5PowZrI9oYzMhmZZUikFd7ClsKAAAA=="
+     alt="LearningObjects.org"
+     style="width:42px;display:block;margin:8px auto 0;">
+</footer>
+</body>
+</html>

@@ -1,0 +1,41 @@
+# Guided Mini Website Simulator (HTML & CSS)
+
+Simulatore didattico per la progettazione e realizzazione di mini siti web multipagina in HTML e CSS.
+
+Il software è progettato per studenti nelle fasi iniziali di apprendimento del web design e consente di:
+- compilare contenuti guidati;
+- generare automaticamente codice HTML e CSS;
+- visualizzare un’anteprima del sito;
+- esportare le pagine generate;
+- verificare requisiti e avanzamento del lavoro.
+
+Il progetto include anche un esempio completo di mini sito (Giappone), utilizzabile come modello di riferimento per un prodotto di livello elevato rispetto agli obiettivi didattici prefissati.
+
+---
+
+## Licenza e condizioni d’uso
+
+Copyright © 2026 Domenico Capano – LearningObjects.org
+
+Tutti i diritti riservati, salvo diversa indicazione scritta dell’autore.
+
+Il software è fornito per uso didattico, dimostrativo e formativo.  
+È consentito l’utilizzo in contesti scolastici e formativi per attività di insegnamento e apprendimento.
+
+Non è consentita la redistribuzione commerciale non autorizzata.  
+Non è consentita la rimozione delle indicazioni di autore e copyright.
+
+---
+
+## Immagini e contenuti esterni
+
+Le immagini utilizzate nell’esempio completo sono collegate da fonti esterne (principalmente Wikimedia Commons).
+
+Le relative licenze restano quelle indicate nelle rispettive pagine di origine e sono riportate nella sezione "Crediti" del mini sito.
+
+---
+
+## Autore
+
+Domenico Capano  
+LearningObjects.org

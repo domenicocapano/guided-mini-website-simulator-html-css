@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Storia del Giappone</title>
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <h1>Storia del Giappone</h1>
+  <p>Mini-sito completo sul Giappone: modello didattico di prodotto eccellente, con contenuti estesi, immagini reali, pagine aggiuntive e crediti.</p>
+  <nav class="menu">
+  <a class="" href="index.html">Home</a>
+  <a class="" href="geografia.html">Geografia</a>
+  <a class="" href="economia.html">Economia</a>
+  <a class="" href="cultura.html">Cultura</a>
+  <a class="attivo" href="storia.html">Storia</a>
+  <a class="" href="turismo.html">Turismo</a>
+  <a class="" href="tecnologia.html">Tecnologia</a>
+  <a class="" href="curiosita.html">Curiosità</a>
+  <a class="" href="crediti.html">Crediti immagini</a>
+</nav>
+</header>
+<main>
+  <div class="avviso">
+    <strong>Uso didattico:</strong> questo esempio mostra come può apparire un lavoro di livello alto. Non deve essere copiato: serve a capire struttura, completezza, qualità dei contenuti, uso del menu e gestione delle immagini.
+  </div>
+
+<section class="scheda">
+  <h2>Cenni storici essenziali</h2>
+  <div class="griglia">
+    <div>
+      <p>La storia giapponese è lunga e complessa. Per molti secoli il Paese ha sviluppato istituzioni, forme artistiche, sistemi religiosi e modelli sociali originali. Il ruolo degli imperatori, dei clan aristocratici, dei samurai e degli shogun ha segnato diverse fasi storiche.</p>
+      <p>Durante il periodo Edo, tra il XVII e il XIX secolo, il Giappone visse una lunga fase di stabilità politica e relativo isolamento. In seguito, con la Restaurazione Meiji del 1868, il Paese avviò una rapida modernizzazione, trasformando istituzioni, esercito, industria e scuola.</p>
+    </div>
+    <figure class="figura">
+      <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Kinkakuji%202004-09-21.jpg" alt="Kinkaku-ji a Kyoto">
+      <figcaption>Un esempio di patrimonio storico e architettonico giapponese.</figcaption>
+    </figure>
+  </div>
+</section>
+<section class="scheda">
+  <h2>Dal Novecento al Giappone contemporaneo</h2>
+  <p>Nel Novecento il Giappone attraversò fasi molto difficili, tra espansione militare, guerra e ricostruzione. Dopo il 1945 il Paese fu ricostruito e divenne progressivamente una potenza economica e tecnologica.</p>
+  <p>Oggi il Giappone è una monarchia costituzionale con istituzioni democratiche. La sua storia recente mostra la capacità di trasformare profondamente economia e società, pur conservando molti elementi culturali tradizionali.</p>
+</section>
+
+</main>
+<footer>
+  <p>Mini-sito realizzato con HTML e CSS.</p>
+  <p>&copy; Copyright Domenico Capano - LearningObjects.org</p>
+</footer>
+
+<script>
+document.addEventListener("copy", function(e){
+  e.preventDefault();
+  alert("Questo è un esempio da osservare, non da copiare. Usa la struttura come modello e scrivi contenuti tuoi.");
+});
+document.addEventListener("cut", function(e){ e.preventDefault(); });
+document.addEventListener("contextmenu", function(e){
+  e.preventDefault();
+  alert("Il tasto destro è disattivato nell'esempio didattico.");
+});
+document.addEventListener("keydown", function(e){
+  const key = e.key.toLowerCase();
+  if((e.ctrlKey && (key === "u" || key === "s" || key === "c")) || e.key === "F12"){
+    e.preventDefault();
+    alert("Questo esempio serve come modello di qualità, non come testo da copiare.");
+  }
+});
+</script>
+
+</body>
+</html>

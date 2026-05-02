@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crediti immagini e fonti</title>
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <h1>Crediti immagini e fonti</h1>
+  <p>Mini-sito completo sul Giappone: modello didattico di prodotto eccellente, con contenuti estesi, immagini reali, pagine aggiuntive e crediti.</p>
+  <nav class="menu">
+  <a class="" href="index.html">Home</a>
+  <a class="" href="geografia.html">Geografia</a>
+  <a class="" href="economia.html">Economia</a>
+  <a class="" href="cultura.html">Cultura</a>
+  <a class="" href="storia.html">Storia</a>
+  <a class="" href="turismo.html">Turismo</a>
+  <a class="" href="tecnologia.html">Tecnologia</a>
+  <a class="" href="curiosita.html">Curiosità</a>
+  <a class="attivo" href="crediti.html">Crediti immagini</a>
+</nav>
+</header>
+<main>
+  <div class="avviso">
+    <strong>Uso didattico:</strong> questo esempio mostra come può apparire un lavoro di livello alto. Non deve essere copiato: serve a capire struttura, completezza, qualità dei contenuti, uso del menu e gestione delle immagini.
+  </div>
+
+<section class="scheda">
+  <h2>Perché indicare i crediti</h2>
+  <p>Quando si usano immagini prese dal web, bisogna controllare la licenza e indicare la fonte. Questo esempio usa immagini da Wikimedia Commons, perché le pagine indicano licenze e condizioni di riuso.</p>
+  <p>Gli studenti possono imparare che usare un'immagine non significa solo copiarla: occorre verificare se può essere riutilizzata e citare correttamente l'origine.</p>
+</section>
+<section class="scheda crediti">
+  <h2>Crediti delle immagini</h2>
+  <ul>
+    <li>Bandiera del Giappone: Wikimedia Commons, <em>Flag of Japan.svg</em>, pubblico dominio.</li>
+    <li>Mappa del Giappone: Wikimedia Commons, <em>Japan location map.svg</em>, CC BY-SA 3.0.</li>
+    <li>Monte Fuji: Wikimedia Commons, <em>Mount Fuji, Japan.JPG</em>, CC BY-SA 4.0.</li>
+    <li>Tokyo skyline: Wikimedia Commons, <em>Tokyo Skyline (214472345).jpeg</em>, CC BY-SA 3.0.</li>
+    <li>Altre immagini di contesto: Wikimedia Commons; verificare sempre la pagina descrittiva della singola immagine.</li>
+  </ul>
+</section>
+<section class="scheda">
+  <h2>Nota sul blocco copia</h2>
+  <p>Il blocco copia e il blocco del tasto destro sono deterrenti didattici, non protezioni assolute. Una pagina web non può nascondere davvero il proprio codice sorgente. L'obiettivo è ricordare allo studente che l'esempio deve essere osservato e rielaborato, non copiato.</p>
+</section>
+
+</main>
+<footer>
+  <p>Mini-sito realizzato con HTML e CSS.</p>
+  <p>&copy; Copyright Domenico Capano - LearningObjects.org</p>
+</footer>
+
+<script>
+document.addEventListener("copy", function(e){
+  e.preventDefault();
+  alert("Questo è un esempio da osservare, non da copiare. Usa la struttura come modello e scrivi contenuti tuoi.");
+});
+document.addEventListener("cut", function(e){ e.preventDefault(); });
+document.addEventListener("contextmenu", function(e){
+  e.preventDefault();
+  alert("Il tasto destro è disattivato nell'esempio didattico.");
+});
+document.addEventListener("keydown", function(e){
+  const key = e.key.toLowerCase();
+  if((e.ctrlKey && (key === "u" || key === "s" || key === "c")) || e.key === "F12"){
+    e.preventDefault();
+    alert("Questo esempio serve come modello di qualità, non come testo da copiare.");
+  }
+});
+</script>
+
+</body>
+</html>

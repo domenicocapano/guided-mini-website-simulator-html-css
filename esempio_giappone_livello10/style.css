@@ -1,0 +1,143 @@
+
+:root{
+  --rosso:#b91c1c;
+  --rosso2:#dc2626;
+  --blu:#1f4e79;
+  --testo:#1f2937;
+  --bordo:#d1d5db;
+  --chiaro:#f8fafc;
+  --nota:#ecfdf5;
+  --avviso:#fff7ed;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  font-family:Arial, Helvetica, sans-serif;
+  background:#f4f7fb;
+  color:var(--testo);
+  line-height:1.65;
+  user-select:none;
+}
+header{
+  background:linear-gradient(135deg,#991b1b,#dc2626);
+  color:white;
+  text-align:center;
+  padding:28px 18px 22px 18px;
+}
+header h1{margin:0;font-size:clamp(1.8rem,4vw,2.8rem)}
+header p{margin:8px auto 0 auto;max-width:920px}
+.menu{
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:8px;
+  margin-top:18px;
+}
+.menu a{
+  background:#ffffff;
+  color:#991b1b;
+  text-decoration:none;
+  padding:10px 14px;
+  border-radius:999px;
+  font-weight:bold;
+  border:2px solid rgba(255,255,255,.65);
+}
+.menu a:hover,.menu a.attivo{
+  background:#fee2e2;
+  color:#7f1d1d;
+}
+main{
+  max-width:1080px;
+  margin:24px auto;
+  padding:0 16px;
+}
+.scheda{
+  background:white;
+  border:1px solid var(--bordo);
+  border-radius:16px;
+  padding:24px;
+  margin:18px 0;
+  box-shadow:0 4px 14px rgba(0,0,0,.06);
+}
+h2{
+  color:#991b1b;
+  border-bottom:2px solid #fecaca;
+  padding-bottom:7px;
+  margin-top:0;
+}
+h3{color:#1f4e79}
+.griglia{
+  display:grid;
+  grid-template-columns:1.2fr .8fr;
+  gap:20px;
+  align-items:start;
+}
+@media(max-width:780px){
+  .griglia{grid-template-columns:1fr}
+}
+img{
+  max-width:100%;
+  border-radius:14px;
+  border:1px solid var(--bordo);
+  background:#fff;
+}
+.figura{
+  margin:0;
+}
+.figura figcaption{
+  font-size:.88rem;
+  color:#4b5563;
+  margin-top:6px;
+}
+.nota{
+  background:var(--nota);
+  border-left:6px solid #15803d;
+  padding:13px;
+  border-radius:9px;
+  margin:14px 0;
+}
+.avviso{
+  background:var(--avviso);
+  border-left:6px solid #ea580c;
+  padding:13px;
+  border-radius:9px;
+  margin:14px 0;
+}
+.tabella{
+  width:100%;
+  border-collapse:collapse;
+  background:#fff;
+}
+.tabella th,.tabella td{
+  border:1px solid var(--bordo);
+  padding:10px;
+  vertical-align:top;
+}
+.tabella th{
+  background:#fee2e2;
+  color:#7f1d1d;
+}
+.badge{
+  display:inline-block;
+  background:#fee2e2;
+  color:#7f1d1d;
+  border-radius:20px;
+  padding:4px 10px;
+  margin:3px;
+  font-weight:bold;
+}
+footer{
+  background:#e5e7eb;
+  text-align:center;
+  padding:18px;
+  margin-top:32px;
+}
+.crediti li{margin:10px 0}
+.blocco-valutazione{
+  background:#eff6ff;
+  border-left:6px solid #2563eb;
+  padding:13px;
+  border-radius:9px;
+  margin-top:16px;
+}
