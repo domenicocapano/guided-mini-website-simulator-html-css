@@ -2,8 +2,6 @@
 
 # Guided Mini Website Simulator (HTML & CSS)
 
-# Guided Mini Website Simulator (HTML & CSS) – Version 1.0
-
 ## Description
 
 This repository contains an educational simulator designed to support the creation of simple multi-page websites using HTML and CSS.
